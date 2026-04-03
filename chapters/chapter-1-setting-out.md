@@ -4,7 +4,7 @@
 
 **Table of Contents**
 
-- [The Red Book of Westmarch - Chapter X: Title](#the-red-book-of-westmarch---chapter-x-title)
+- [The Red Book of Westmarch - Chapter 1: Title](#the-red-book-of-westmarch---chapter-x-title)
   - [Summary](#summary)
   - [Artifact](#artifact)
   - [AI Assistance](#ai-assistance)
@@ -16,14 +16,13 @@ Die Idee unseres Projekts ist eine interaktive Anwendung namens „Fellow Alert�
 
 **Learning Outcomes**
 
-- Understand [concept / skill of the phase]
-- Apply [tool / language / logic] to build [artifact]
-- Reflect on AI-assisted development and decision-making
-- Contribute to a **shared, evolving system**
+- In dieser Phase haben wir gelernt, wie man eine Problemstellung strukturiert analysiert und daraus ein klares Anwendungskonzept ableitet. Wir haben verstanden, dass es wichtig ist, zuerst die Situation und das Ziel der Anwendung zu definieren, bevor man mit Design oder Programmierung beginnt.
+- Wir haben Logik zur Darstellung von Zuständen (z. B. Survival, Pressure, Coordination) entwickelt und diese visuell in einer Map umgesetzt, um die Situation verständlich darzustellen.
+- RWir haben AI als Unterstützung genutzt, um Grafik von Map zu erstellen und Ideen zu finden. AI lieferte hilfreiche Vorschläge , diese aber nicht immer direkt passend sind und angepasst werden müssen.
+Wichtig war, die Vorschläge kritisch zu hinterfragen und eigenständig weiterzuentwickeln.
+- Wir haben unser Konzept und unsere Umsetzung so aufgebaut, dass sie als Grundlage für weitere Aufgaben dienen kann.
+Die entwickelte Anwendung ist erweiterbar und kann in späteren Phasen weiter ausgebaut werden, z. B. durch zusätzliche Funktionen oder detailliertere Simulationen.
 
-- Verstehen der Problematik von "Information Asymmetry" in Krisensituationen.
-- Anwendung strukturierter Analyse (Situation & Intent) auf ein Software-Projekt.
-- Reflexion über die Rolle von KI beim Brainstorming von System-Constraints.
 ---
 
 ## Artifact
