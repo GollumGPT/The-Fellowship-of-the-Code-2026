@@ -40,10 +40,8 @@ Artifact I: Situation & Intent (Prüfe den Link!)
 
 **Focus:**
 
-Reduktion von Fehlentscheidungen unter Zeitdruck durch gerichtete Notfallalarme und geteilte Dashboards.
-... [specific feature of the system / requirement addressed]
+Die Anwendung richtet sich an die Mitglieder der Gefährten. Ziel ist es, eine schnelle Alarmierung und bessere Koordination innerhalb der Gruppe zu ermöglichen. Nutzer sollen durch das System schneller erkennen, dass ein Notfall vorliegt, und gezielt reagieren können. Die Anwendung unterstützt Entscheidungen, ersetzt sie aber nicht. Sie liefert Informationen, verbessert die Kommunikation und hilft dabei, eine koordinierte Reaktion zu ermöglichen.
 
----
 
 ## AI Assistance
 
