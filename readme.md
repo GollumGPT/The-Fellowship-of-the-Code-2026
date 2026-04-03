@@ -68,8 +68,8 @@ Die Folge: Niemand weiß, wo Hilfe benötigt wird, wie dringend die Situation is
 
 - **Gerichteter Notruf (statt einfachem Alarm):** Übermittelt wer betroffen ist, wo sich die Person befindet und seit wann die Situation besteht  
 - **Gemeinsames Lagebild:** Alle sehen denselben, sich aktualisierenden Zustand, statt verteilter Einzelinformationen  
-- **Unterstützung der Rettungskoordination:** Stellt dar, wer reagiert, von wo aus und mit welchem Fortschritt 
-- **Sichtbarkeit kritischer Zustände:** Zeigt zentrale Faktoren wie Bedrohungsniveau, verbleibende Zeit und geschätzte Überlebenschance  
+- **Rettungskoordination:** Stellt dar, wer reagiert, von wo aus und mit welchem Fortschritt 
+- **Darstellung kritischer Zustände:** Zeigt zentrale Faktoren wie Bedrohungsniveau, verbleibende Zeit und geschätzte Überlebenschance  
 
 ---
 
