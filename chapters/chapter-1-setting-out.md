@@ -1,4 +1,4 @@
-# The Red Book of Westmarch - Chapter 1: Horn of (Digital) Gondor 2.0
+# The Red Book of Westmarch - Chapter 1: Settig out
 
 "One does not simply walk into Mordor." - Boromir
 
@@ -12,7 +12,7 @@
 
 ## Summary
 
-Die Idee unseres Projekts ist eine interaktive Anwendung namens „Fellow Alert“, die auf der Szene von Boromir am Amon Hen basiert. Das Problem ist, dass Boromir stirbt, weil die Kommunikation innerhalb der Gefährten zu langsam und unkoordiniert ist. Die Gruppe kann nicht rechtzeitig reagieren. Die Anwendung zeigt, wie ein digitales Alarm- und Koordinationssystem helfen könnte, schneller zu reagieren und dadurch das Ergebnis zu verändern.
+Die Idee unseres Projekts ist eine interaktive Anwendung namens „Horn of (Digital) Gondor 2.0“, die auf der Szene von Boromir am Amon Hen basiert. Das Problem ist, dass Boromir stirbt, weil die Kommunikation innerhalb der Gefährten zu langsam und unkoordiniert ist. Die Gruppe kann nicht rechtzeitig reagieren. Die Anwendung zeigt, wie ein digitales Alarm- und Koordinationssystem helfen könnte, schneller zu reagieren und dadurch das Ergebnis zu verändern.
 
 **Learning Outcomes**
 
