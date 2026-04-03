@@ -18,7 +18,7 @@ Die Idee unseres Projekts ist eine interaktive Anwendung namens „Fellow Alert�
 
 - In dieser Phase haben wir gelernt, wie man eine Problemstellung strukturiert analysiert und daraus ein klares Anwendungskonzept ableitet. Wir haben verstanden, dass es wichtig ist, zuerst die Situation und das Ziel der Anwendung zu definieren, bevor man mit Design oder Programmierung beginnt.
 - Wir haben Logik zur Darstellung von Zuständen (z. B. Survival, Pressure, Coordination) entwickelt und diese visuell in einer Map umgesetzt, um die Situation verständlich darzustellen.
-- RWir haben AI als Unterstützung genutzt, um Grafik von Map zu erstellen und Ideen zu finden. AI lieferte hilfreiche Vorschläge , diese aber nicht immer direkt passend sind und angepasst werden müssen.
+- Wir haben AI als Unterstützung genutzt, um Grafik von Map zu erstellen und Ideen zu finden. AI lieferte hilfreiche Vorschläge , diese aber nicht immer direkt passend sind und angepasst werden müssen.
 Wichtig war, die Vorschläge kritisch zu hinterfragen und eigenständig weiterzuentwickeln.
 - Wir haben unser Konzept und unsere Umsetzung so aufgebaut, dass sie als Grundlage für weitere Aufgaben dienen kann.
 Die entwickelte Anwendung ist erweiterbar und kann in späteren Phasen weiter ausgebaut werden, z. B. durch zusätzliche Funktionen oder detailliertere Simulationen.
