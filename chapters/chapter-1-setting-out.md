@@ -4,7 +4,7 @@
 
 **Table of Contents**
 
-- [The Red Book of Westmarch - Chapter 1: Title](#the-red-book-of-westmarch---chapter-x-title)
+- [The Red Book of Westmarch - Chapter 1: Horn of (Digital) Gondor 2.0](#the-red-book-of-westmarch---chapter-x-title)
   - [Summary](#summary)
   - [Artifact](#artifact)
   - [AI Assistance](#ai-assistance)
