@@ -12,7 +12,7 @@ Es gibt **kein gemeinsames Lagebild**, keine klare Priorisierung und keine koord
 
 ## 2. Intent
 
-Der Fellowship Companion adressiert genau solche Situationen.
+Der Horn of (Digital) Gondor 2 adressiert genau solche Situationen.
 
 Die Anwendung ermöglicht es, einen Notfall so zu erfassen, dass **alle Mitglieder sofort verstehen, was passiert, wo es passiert und wie dringend es ist**.
 
