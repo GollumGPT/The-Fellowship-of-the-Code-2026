@@ -48,26 +48,33 @@ Reduktion von Fehlentscheidungen unter Zeitdruck durch gerichtete Notfallalarme 
 
 ## AI Assistance
 
-In dieser Phase habe ich eine KI (Gemini und ChatGPT) als Sparringspartner genutzt.
+Für die Entwicklung des Konzepts und der Anwendung wurde AI verwendet. Die AI hat geholfen bei: 
 
-What did I expect? 
-Ich wollte Hilfe dabei, die vagen Probleme der Gefährten (Amon Hen) in konkrete Software-Anforderungen zu übersetzen.
+- Strukturierung der Aufgabe (Situation, Intent, Value)
+- Entwicklung der Idee eines Alarm-Systems
+- Umsetzung der Simulation (Map, Figuren, Bewegung, Statuswerte)
 
-What actually happened? 
-Die KI war sehr gut darin, logische Annahmen (Assumptions) zu formulieren, neigte aber dazu, das System zu komplex zu machen (z.B. GPS-Tracking, das im HdR-Setting keinen Sinn ergibt).
+Hilfreich war vor allem:
+- die klare Strukturierung der Anforderungen
+- Vorschläge für Visualisierung (Map, Regionen, Figuren)
+- Logik für Simulation (Survival, Pressure, Coordination)
 
-How did AI help or mislead me? 
-Sie half mir, den "Value" präziser zu formulieren (Zeitersparnis), führte mich aber kurzzeitig in Richtung einer zu modernen Messaging-App, was ich für die "Fantasy-Logik" korrigieren musste.
+Teilweise mussten Vorschläge angepasst werden, da: 
+- einige Lösungen zu technisch oder zu komplex waren
+- nicht alle Funktionen direkt zur Aufgabenstellung gepasst haben
+- Interaktion (z. B. klickbare Elemente) nachträglich verbessert werden musste
 
-What decision did I make consciously? 
-Ich habe mich bewusst gegen komplexe Kommunikation entschieden und mich auf "minimale Signale" konzentriert, um den Zeitdruck der Nutzer zu berücksichtigen.
+  Wir haben die Vorschläge iterativ angepasst, bis sie zur Idee und Aufgabe gepasst haben.
 
-- What would I do differently next time?
-
----
 
 ## Lessons Learned
 
-Die größte Erkenntnis war, dass ein technisches System nicht das Handeln der Nutzer ersetzen kann, sondern nur die Grundlage für Entscheidungen verbessert. Die Herausforderung liegt nicht im Alarm selbst, sondern darin, die Unsicherheit der Situation (unvollständige Daten) für alle sichtbar zu machen, anstatt falsche Sicherheit vorzugaukeln.
+In dieser Aufgabe haben wir verstanden, dass es nicht darum geht, sofort eine perfekte Lösung zu bauen, sondern zuerst das Problem klar zu definieren. Eine wichtige Erkenntnis war, dass Kommunikation und Koordination entscheidend sind und oft wichtiger als individuelle Stärke.
 
-- Insights, challenges, reflections
+Schwierig war vor allem:
+- die Situation konkret zu formulieren (nicht zu allgemein)
+- zwischen Konzept und Umsetzung zu unterscheiden
+- sinnvolle Systemziele zu definieren
+  
+Wir haben gelernt, dass eine gute Lösung davon abhängt, wie klar man die Ausgangssituation versteht und strukturiert.
+Außerdem wurde deutlich, dass Visualisierung (z. B. Karte und Simulation) helfen kann, komplexe Probleme besser darzustellen und zu verstehen.
