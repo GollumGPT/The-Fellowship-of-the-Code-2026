@@ -2,7 +2,7 @@
 
 *`The Fellowship of the Code – A Developer's Tale`*
 
-*`LOTR Quote relevant to the assignment or artifact` `"..." - Character`*
+*`"One does not simply walk into Mordor." - Boromir`*
 
 **Table of Contents**
 
@@ -17,14 +17,12 @@
 
 ## Purpose of The Fellowship Companion (TFC)
 
-*`Adapt to your project...`*
-
-We are 5 hobbits on our great journey from the Shire to Mordor. Along the way, we need a system to support **our planning, decisions, communication, and survival**.  
-The Fellowship Companion is a **evolving digital tool** we build together. It is not perfect, it is not finished - it evolves as we travel.
+Am Amon Hen wird ein Mitglied der Gemeinschaft von mehreren Gegnern angegriffen, während die anderen räumlich getrennt sind. Das einzige Signal – das Horn – ist zu spät, ungerichtet und liefert keine verwertbaren Informationen.
+Die Folge: Niemand weiß, wo Hilfe benötigt wird, wie dringend die Situation ist oder ob koordiniertes Eingreifen noch möglich ist.
 
 - **Who we are:** The Fellowship - a group of 5 hobbits (students) working together.  
-- **What we build:** A companion system that helps manage our journey, resources, and tasks.  
-- **Why we build it:** So our journey succeeds and we understand the mindset, logic, design, and practice of developers.
+- **What we build:** Ein System, das ein einzelnes Notsignal in ein sofort verständliches, gemeinsames Lagebild überführt.  
+- **Why we build it:** Weil in Situationen wie am Amon Hen Zeitverlust und Unklarheit direkt zu fatalen Konsequenzen führen.
 
 ---
 
@@ -68,13 +66,10 @@ The Fellowship Companion is a **evolving digital tool** we build together. It is
 
 ## Key Features of The Fellowship Companion
 
-*`Adapt to your project...`*
-
-- **Journey Planning:** map tasks, flows, and deadlines  
-- **Resource Management:** track fictional "hobbit resources" (food, supplies, morale)  
-- **Decision Support:** flows and logic for key choices on the journey  
-- **Communication:** share work, reflections, and AI learnings  
-- **Versioned & Evolving:** artifacts build on each other, tracked in The Red Book
+- **Gerichteter Notruf (statt einfachem Alarm):** Übermittelt wer betroffen ist, wo sich die Person befindet und seit wann die Situation besteht  
+- **Gemeinsames Lagebild:** Alle sehen denselben, sich aktualisierenden Zustand, statt verteilter Einzelinformationen  
+- **Unterstützung der Rettungskoordination:** Stellt dar, wer reagiert, von wo aus und mit welchem Fortschritt 
+- **Sichtbarkeit kritischer Zustände:** Zeigt zentrale Faktoren wie Bedrohungsniveau, verbleibende Zeit und geschätzte Überlebenschance  
 
 ---
 
