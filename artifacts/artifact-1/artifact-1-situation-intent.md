@@ -1,9 +1,8 @@
 # The Fellowship Companion – Artifact I: Situation & Intent  
-*(For demonstration purposes only)*
 
 ## 1. Situation
 
-Am :contentReference[oaicite:0]{index=0} wird ein Mitglied der Gemeinschaft von mehreren Gegnern angegriffen, während die anderen räumlich getrennt sind.  
+Am Amon Hen wird ein Mitglied der Gemeinschaft von mehreren Gegnern angegriffen, während die anderen räumlich getrennt sind.  
 Das einzige Signal – das Horn – ist **zu spät, ungerichtet und ohne klare Information**.
 
 Die Situation ist kritisch, weil Entscheidungen unter **Zeitdruck, Unsicherheit und fehlender Übersicht** getroffen werden müssen.  
@@ -25,7 +24,7 @@ Primäre Nutzer sind die Mitglieder der Gemeinschaft in verteilten, gefährliche
 
 ## 3. Value
 
-Der Mehrwert entsteht in dem Moment, in dem Zeit und Klarheit über Leben und Tod entscheiden – wie bei :contentReference[oaicite:1]{index=1}.
+Der Mehrwert entsteht in dem Moment, in dem Zeit und Klarheit über Leben und Tod entscheiden.
 
 Ohne das System:
 - Signale sind unklar oder kommen zu spät  
@@ -77,6 +76,3 @@ Das System ermöglicht:
 
 - **Eingeschränkte Kommunikation:**  
   Keine kontinuierliche Verbindung → System muss mit minimalen Signalen funktionieren  
-
-- **Schutz sensibler Informationen:**  
-  Nicht alles darf geteilt werden → nur entscheidungsrelevante Daten werden sichtbar gemacht  
