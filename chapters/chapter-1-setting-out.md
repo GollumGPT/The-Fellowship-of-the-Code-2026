@@ -45,23 +45,21 @@ Die Anwendung richtet sich an die Mitglieder der Gefährten. Ziel ist es, eine s
 
 ## AI Assistance
 
-Für die Entwicklung des Konzepts und der Anwendung wurde AI verwendet. Die AI hat geholfen bei: 
+Für die Entwicklung des Konzepts und der Anwendung wurde AI verwendet bei: 
 
 - Strukturierung der Aufgabe (Situation, Intent, Value)
 - Entwicklung der Idee eines Alarm-Systems
-- Umsetzung der Simulation (Map, Figuren, Bewegung, Statuswerte)
+- Umsetzung der Simulation (Map, Figuren)
 
 Hilfreich war vor allem:
 - die klare Strukturierung der Anforderungen
 - Vorschläge für Visualisierung (Map, Regionen, Figuren)
-- Logik für Simulation (Survival, Pressure, Coordination)
 
 Teilweise mussten Vorschläge angepasst werden, da: 
 - einige Lösungen zu technisch oder zu komplex waren
 - nicht alle Funktionen direkt zur Aufgabenstellung gepasst haben
-- Interaktion (z. B. klickbare Elemente) nachträglich verbessert werden musste
 
-  Wir haben die Vorschläge iterativ angepasst, bis sie zur Idee und Aufgabe gepasst haben.
+Wir haben die Vorschläge iterativ angepasst, bis sie zur Idee und Aufgabe gepasst haben.
 
 
 ## Lessons Learned
@@ -71,7 +69,7 @@ In dieser Aufgabe haben wir verstanden, dass es nicht darum geht, sofort eine pe
 Schwierig war vor allem:
 - die Situation konkret zu formulieren (nicht zu allgemein)
 - zwischen Konzept und Umsetzung zu unterscheiden
-- sinnvolle Systemziele zu definieren
+- sinnvolle Ziele zu definieren
   
 Wir haben gelernt, dass eine gute Lösung davon abhängt, wie klar man die Ausgangssituation versteht und strukturiert.
-Außerdem wurde deutlich, dass Visualisierung (z. B. Karte und Simulation) helfen kann, komplexe Probleme besser darzustellen und zu verstehen.
+Außerdem wurde deutlich, dass Visualisierung (z. B. Karte) helfen kann, komplexe Probleme besser darzustellen und zu verstehen.
