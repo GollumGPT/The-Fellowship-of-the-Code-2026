@@ -1,4 +1,4 @@
-# The Red Book of Westmarch - Chapter 1: Settig out
+# The Red Book of Westmarch - Chapter 1: Setting out
 
 "One does not simply walk into Mordor." - Boromir
 
