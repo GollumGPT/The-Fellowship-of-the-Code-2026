@@ -1,12 +1,10 @@
 # The Fellowship Companion - Artifact III: Representation
 
-*`(For demonstration purposes only)`*
-
 ## System Capability
 
 **The system helps the Fellowship make decisions.**
 
-I chose this capability because decisions are important for the Fellowship and they have to decide a lot during the journey.
+The system enables Fellowship members to request immediate assistance during life-threatening situations. It automatically pairs the distress signal with critical data (precise location and specific type of threat) to ensure the rest of the group can react correctly without needing further explanation.
 
 ## Static Interface Implementation
 
@@ -16,39 +14,15 @@ I chose this capability because decisions are important for the Fellowship and t
 
 ## Design Rationale
 
-This design supports the intent because it lets the user decide things. I followed the wireframe I made before. I did not implement functionality because this is only HTML and CSS.
+This design is focused on speed and clarity to help a user who is under extreme pressure and has no time to think.
 
-**Assumption:** The Fellowship knows how to use the interface.
+- Decision Hierarchy: To prevent "choice paralysis" under pressure, the UI is reduced to a single primary action: Send Emergency Alert. The alternative ("Wait/Cancel") is moved to a secondary back-button, ensuring the main goal is unmistakable.
+- High-Contrast: The "Send Alert" button is the most visible element. Its bright red color and large size ensure that the user knows exactly where to press to get help.
+- Narrative Specificity: Instead of generic risk levels (High/Low), the interface uses Lore-specific hazards (Orc Ambush, Nazgûl Sighted). This allows the receiver to know immediately whether they should draw swords or hide.
+- Automated Information: The location is displayed clearly as "detected," reassuring the user that the system is already working and their coordinates are ready to be sent.
 
----
----
+**Assumptions:** 
 
-## Why this is weak
+- Instant Location Availability: It is assumed that the device has already established a stable GPS connection (a "GPS lock") by the time the screen is opened, so the location is displayed immediately without delay.
 
-- **Capability is too vague:** *"Helps the Fellowship make decisions"* is not a clearly scoped capability.
-- **No concrete context:** No reference to which decision, when, or why it matters in the journey.
-- **HTML issues:**
-  - No semantic structure (header, main, section, etc.)
-  - Buttons are not connected to a specific task
-  - No labels, grouping, or hierarchy
-  - Capability is implicit and vague (*"Choose what to do next"*)
-  - No trace of the wireframe beyond *"there are buttons"*
-- **CSS issues:**
-  - Styling is arbitrary (*"make it look okay"*)
-    - No connection to the narrative (LotR)
-  - No layout logic (no flex/grid, no alignment intention)
-  - Visual hierarchy is accidental
-  - Colors have no meaning
-- **Conceptual issues:**
-  - The interface does not clearly represent:
-    - What decision is being made?
-    - Why now?
-    - What information supports the decision?
-  - Could belong to any app, not this system
-  - The UI does not express intent - it merely exists
-- **Design rationale is superficial:** Restates the assignment constraints instead of reflecting on decisions.
-- **Assumptions are not examined:** *"I assume the Fellowship knows how to use it"* avoids responsibility instead of reasoning.
-- **No linkage:** Weak or missing connection to Assignment 1 (situation/intent) and Assignment 2 (decisions).
-- **Reads like a checklist:** Not like a considered design step in a larger system.
-
-*`This example is not entirely wrong, but it is very generic and would be very hard to build on in later assignments.`*
+- Physical Limitations: We assume the user may have shaky hands or be moving quickly, which is why the primary button is oversized and the interactive elements are spaced far apart.
