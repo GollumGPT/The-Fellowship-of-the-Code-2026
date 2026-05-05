@@ -85,3 +85,6 @@ As a result, no one knows where help is needed, how urgent the situation is, or 
 | 1.5    | 2026-04-21 | Compiled Artifact 2 |
 | 1.6    | 2026-04-21 | Added src, mermaid |
 | 1.7    | 2026-04-23 | Wrote Chapter 2 |
+| 1.8    | 2026-05-05 | Compiled Artifact 3 |
+| 1.9    | 2026-05-05 | Added style.css |
+| 1.10   | 2026-05-05 | Added interface.html |
