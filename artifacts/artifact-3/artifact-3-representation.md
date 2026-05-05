@@ -4,7 +4,7 @@
 
 **The system helps the Fellowship make decisions.**
 
-The system enables Fellowship members to request immediate assistance during life-threatening situations. It automatically pairs the distress signal with critical data (precise location and specific type of threat) to ensure the rest of the group can react correctly without needing further explanation.
+The system enables Fellowship members to request immediate assistance during life-threatening situations. It automatically pairs the distress signal with critical data (precise location and specific type of threat) to ensure the rest of the group can react fast and correctly.
 
 ## Static Interface Implementation
 
