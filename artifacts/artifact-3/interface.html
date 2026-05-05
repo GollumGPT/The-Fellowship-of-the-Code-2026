@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fellowship Companion - Final Focus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <button type="button" class="btn-back">&lsaquo;</button>
+            <h1>Emergency Alert</h1>
+            <div class="spacer"></div>
+        </header>
+
+        <main class="content">
+            <!-- Location Display -->
+            <section class="info-group">
+                <label class="label-tiny">Current Location</label>
+                <div class="location-badge">Mines of Moria (Detected)</div>
+            </section>
+
+            <!-- Hazard Selection as Buttons -->
+            <section class="info-group">
+                <label class="label-tiny">Type of Hazard</label>
+                <div class="hazard-grid">
+                    <button type="button" class="tile selected">
+                        <span class="tile-title">Orc Ambush</span>
+                        <span class="tile-desc">Combat Support</span>
+                    </button>
+                    <button type="button" class="tile">
+                        <span class="tile-title">Nazgûl</span>
+                        <span class="tile-desc">Stealth Mode</span>
+                    </button>
+                    <button type="button" class="tile">
+                        <span class="tile-title">Member Lost</span>
+                        <span class="tile-desc">Search Party</span>
+                    </button>
+                    <button type="button" class="tile">
+                        <span class="tile-title">Trap</span>
+                        <span class="tile-desc">Physical Danger</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Main Action -->
+            <section class="action-area">
+                <button type="button" class="btn-emergency">SEND ALERT NOW</button>
+                <p class="consequence-text">
+                    This will broadcast your coordinates and the selected hazard to all Fellowship members immediately.
+                </p>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <div class="status-pill">GPS Signal Locked</div>
+        </footer>
+    </div>
+
+</body>
+</html>
