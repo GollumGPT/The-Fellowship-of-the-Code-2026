@@ -10,7 +10,13 @@ The system enables Fellowship members to request immediate assistance during lif
 
 `[Static Interface](/src/interface.html)`
 
-> For this example see [interface.weak.html](/src/interface.weak.html)
+> [interface.html](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/interface.html)
+
+## CSS
+
+`[Stylesheet](/src/style.css)`
+
+> [style.css](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/style.css)
 
 ## Design Rationale
 
