@@ -2,19 +2,17 @@
 
 ## System Capability
 
-**The system helps the Fellowship make decisions.**
+**Emergency Alert**
 
-The system enables Fellowship members to request immediate assistance during life-threatening situations. It automatically pairs the distress signal with critical data (precise location and specific type of threat) to ensure the rest of the group can react fast and correctly.
+We chose this capability because it solves a key problem in our system: slow communication in dangerous situations.
+
+The Emergency Alert enables Fellowship members to request immediate assistance during life-threatening situations. It automatically pairs the distress signal with critical data (precise location and specific type of threat) to ensure the rest of the group can react fast and correctly.
 
 ## Static Interface Implementation
-
-`[Static Interface](/src/interface.html)`
 
 > [interface.html](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/interface.html)
 
 ## CSS
-
-`[Stylesheet](/src/style.css)`
 
 > [style.css](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/style.css)
 
