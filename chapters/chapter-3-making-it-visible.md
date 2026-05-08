@@ -14,13 +14,14 @@
 
 ## Summary
 
-In this chapter, we moved from our rough wireframe to an actual static HTML and CSS page. The goal wasn't to make it look like a finished website, but to see if my structure from Assignment 2 actually makes sense when coded. We focused on building a layout that works even when a user is under extreme pressure, ensuring the "distress signal" is the unmistakable centerpiece of the page.
+In this chapter, we moved from our rough wireframe to an actual static HTML and CSS page. The goal wasn't to make it look like a finished website, but to see if our structure from Assignment 2 actually makes sense when coded. We focused on building a layout that works even when a user is under extreme pressure, ensuring the "distress signal" is the unmistakable centerpiece of the page.
 
 **Learning Outcomes**
 
 - Figuring out how to translate a drawing (wireframe) into clean HTML tags.
 - Using CSS for layout and grouping rather than just making things look pretty.
 - Understanding how to show what’s important on a page just by where it's placed.
+- Understanding the importance of semantic HTML for better structure and accessibility.
 - Get to know Stress UX
 
 ---
