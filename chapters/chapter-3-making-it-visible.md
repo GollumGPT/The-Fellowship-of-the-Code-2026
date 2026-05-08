@@ -31,12 +31,13 @@ In this chapter, we moved from our rough wireframe to an actual static HTML and 
 
 *`Adapt to your project...`*
 
-**File:** `[Artifact 3](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/f335bda6774b9a1e6c1cb087bbaa479df459a63d/artifacts/artifact-3/artifact-3-representation.md)`
+**File:** `[Artifact 3] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/29ccf86f5f764bb488c4ee759d4e9ad715b40ad3/artifacts/artifact-3/artifact-3-representation.md)
 
 **Build:**
 
-[CSS] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/style.css)
-[HTML] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/interface.html)
+> [interface.html](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/interface.html)
+
+> [style.css](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/style.css)
 
 **Focus:**
 
