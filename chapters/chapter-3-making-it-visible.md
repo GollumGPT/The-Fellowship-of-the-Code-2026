@@ -1,6 +1,6 @@
-# The Red Book of Westmarch - Chapter X: Title
+# The Red Book of Westmarch - Chapter 3: Making it visible
 
-*`LOTR Quote relevant to the assignment or artifact` `"..." - Character`*
+*`A red sun rises. Blood has been spilled this night.` `" — Legolas`*
 
 **Table of Contents**
 
@@ -16,15 +16,14 @@
 
 *`Adapt to your project...`*
 
-This chapter focuses on **[one specific requirement or artifact]** of The Fellowship Companion.
-It shows **what was added, why it was added, and how it fits into the larger system**.
+In this chapter, we moved from our rough wireframe to an actual static HTML and CSS page. The goal wasn't to make it look like a finished website, but to see if my structure from Assignment 2 actually makes sense when coded. We focused on building a layout that works even when a user is under extreme pressure, ensuring the "distress signal" is the unmistakable centerpiece of the page.
 
 **Learning Outcomes**
 
-- Understand [concept / skill of the phase]
-- Apply [tool / language / logic] to build [artifact]
-- Reflect on AI-assisted development and decision-making
-- Contribute to a **shared, evolving system**
+- Figuring out how to translate a drawing (wireframe) into clean HTML tags.
+- Using CSS for layout and grouping rather than just making things look pretty.
+- Understanding how to show what’s important on a page just by where it's placed.
+- Get to know Stress UX
 
 ---
 
@@ -32,27 +31,24 @@ It shows **what was added, why it was added, and how it fits into the larger sys
 
 *`Adapt to your project...`*
 
-**File:** `[Name](Link)`
+**File:** `[Artifact 3](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/f335bda6774b9a1e6c1cb087bbaa479df459a63d/artifacts/artifact-3/artifact-3-representation.md)`
 
 **Build:**
 
-... [requirements document / Mermaid flow / wireframe / HTML + CSS page / JavaScript page / low-code extension]
+[CSS] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/style.css)
+[HTML] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/b7998aad9230dd48950877b99bb85550fc408b89/artifacts/artifact-3/src/interface.html)
 
 **Focus:**
 
-... [specific feature of the system / requirement addressed]
+Emergency Alert
 
 ---
 
 ## AI Assistance
 
-*`Adapt to your project...`*
-
-- What did I expect?
-- What actually happened?
-- How did AI help or mislead me?
-- What decision (changes) did I make consciously?
-- What would I do differently next time?
+- We used AI to generate the initial HTML and CSS structure for the alert system.
+- The AI was actually very helpful in brainstorming for stress situations. It gave us ideas on how to simplify the UI so a user doesn't panic or make mistakes.
+- It helped us refine the code to ensure it is strictly semantic and structured
 
 ---
 
