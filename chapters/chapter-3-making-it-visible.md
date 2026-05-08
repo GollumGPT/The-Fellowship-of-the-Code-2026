@@ -14,8 +14,6 @@
 
 ## Summary
 
-*`Adapt to your project...`*
-
 In this chapter, we moved from our rough wireframe to an actual static HTML and CSS page. The goal wasn't to make it look like a finished website, but to see if my structure from Assignment 2 actually makes sense when coded. We focused on building a layout that works even when a user is under extreme pressure, ensuring the "distress signal" is the unmistakable centerpiece of the page.
 
 **Learning Outcomes**
@@ -29,9 +27,8 @@ In this chapter, we moved from our rough wireframe to an actual static HTML and 
 
 ## Artifact
 
-*`Adapt to your project...`*
-
-**File:** `[Artifact 3] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/29ccf86f5f764bb488c4ee759d4e9ad715b40ad3/artifacts/artifact-3/artifact-3-representation.md)
+**File:** 
+> [Artifact 3](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/29ccf86f5f764bb488c4ee759d4e9ad715b40ad3/artifacts/artifact-3/artifact-3-representation.md)
 
 **Build:**
 
