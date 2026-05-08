@@ -52,6 +52,4 @@ Emergency Alert
 
 ## Lessons Learned
 
-*`Adapt to your project...`*
-
-- Insights, challenges, reflections
+Building this page was a great way to finally learn how HTML and CSS actually work together. We realized that while AI is really good at giving you a quick start, you can’t just copy-paste everything. We had to manually fix the code in many places to make it cleaner and to make sure it actually did what we wanted. We learned during the design process that when someone is in a stressful situation, a simple interface is much better. It taught us that "less is more"—by taking things away, we actually made the tool more useful for a Fellowship member who needs to send an alert quickly.
