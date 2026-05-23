@@ -1,4 +1,4 @@
-1. Application Description
+Application Description
 The application is designed to manage rations.
 The user can enter a value and either add it to the total or consume it.
 The current amount is displayed in the interface.
