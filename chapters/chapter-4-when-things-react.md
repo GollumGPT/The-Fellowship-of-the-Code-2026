@@ -1,6 +1,6 @@
-# The Red Book of Westmarch - Chapter X: Title
+# The Red Book of Westmarch - Chapter IV: Application Logic & State
 
-*`LOTR Quote relevant to the assignment or artifact` `"..." - Character`*
+*> "The Grey Pilgrim had said that there was hope, but only a fool's hope. Yet, even a fool's hope can guide the hand when the shadows lengthen." — *The Chronicles of the Companions*
 
 **Table of Contents**
 
@@ -14,17 +14,15 @@
 
 ## Summary
 
-*`Adapt to your project...`*
+This chapter focuses on transforming the static user interface of **The Fellowship Companion** into an interactive, functional slice of application logic. Using the **Emergency Alert** capability established in prior phases, state and logic are introduced via plain JavaScript. 
 
-This chapter focuses on **[one specific requirement or artifact]** of The Fellowship Companion.
-It shows **what was added, why it was added, and how it fits into the larger system**.
+The goal is to move from passive design to active execution, showcasing how a user under extreme situational stress interacts with the tool, how the system locks down options to prevent user error during a crisis, and how immediate UI feedback stabilizes a chaotic situation.
 
 **Learning Outcomes**
 
-- Understand [concept / skill of the phase]
-- Apply [tool / language / logic] to build [artifact]
-- Reflect on AI-assisted development and decision-making
-- Contribute to a **shared, evolving system**
+- Understand the core relationship between application state, logic constraints, and UI updates.
+- Apply vanilla JavaScript to express real-world tactical behavior without relying on bulky frameworks.
+- Reflect on how logic constraints (such as disabling elements post-click) shape the user experience more powerfully than raw visual design.
 
 ---
 
