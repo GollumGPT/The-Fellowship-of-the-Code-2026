@@ -30,9 +30,9 @@ As a result, the Fellowship can react faster, coordinate more effectively, and r
 
 > [interface.html](./src/interface.html)
 
-> [css](./src/css)
+> [style.css](./src/style.css)
 
-> [logic.js](./src/logic.js))*
+> [logic.js](./src/logic.js)
 
 ## Design Rationale
 
@@ -92,7 +92,7 @@ These omissions keep the project focused entirely on:
 - state management
 - user experience under stress conditions
 
-**Assumption:** 
+## Assumption
 
 **Active Signal Lock:** 
 
