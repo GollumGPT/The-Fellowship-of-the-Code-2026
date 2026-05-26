@@ -48,8 +48,7 @@ Emergency Alert
 
 ## AI Assistance
 
-> We expected a clean JS structure to connect variables with the existing DOM and CSS.
-> The AI provided a minimalist script using guard clauses.
+We expected a clean JS structure to connect variables with the existing DOM and CSS. The AI provided a minimalist script using guard clauses.
 
 
 ---
