@@ -29,11 +29,16 @@ The goal is to move from passive design to active execution, showcasing how a us
 ## Artifact
 
 
-**File:** `[Name](Link)`
+**File:** 
+> [Artifact 4](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/tree/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-3)
 
 **Build:**
 
-... [requirements document / Mermaid flow / wireframe / HTML + CSS page / JavaScript page / low-code extension]
+> [interface.html](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/interface.html)
+
+> [style.css] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/style.css)
+
+> [logic.js] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/logic.js)
 
 **Focus:**
 
@@ -43,13 +48,13 @@ Emergency Alert
 
 ## AI Assistance
 
-*`Adapt to your project...`*
+We expected the AI to provide a highly streamlined template that integrated state variables natively into the existing DOM architecture without breaking the established Lore-appropriate CSS themes.
 
-- What did I expect?
-- What actually happened?
-- How did AI help or mislead me?
-- What decision (changes) did I make consciously?
-- What would I do differently next time?
+The AI provided a clean script that linked state modifications directly to structural layout mutations. It also suggested native browser API integration (like navigator.vibrate) to enrich tactical feedback without adding bulky external dependencies. It helped by emphasizing a minimalist architectural style (using guard clauses instead of deep nested if/else wrappers).
+
+I manually removed external media asset logic (like an un-embedded .mp3 audio element tracker) to ensure the client-side code remains entirely self-contained, lightweight, and robust against broken asset links.
+
+I would explore defining the UI transitions entirely via declarative CSS state classes (e.g., adding a .state-sent class to the parent container) rather than directly overriding inline styles in JavaScript, further separating logic from visual presentation rules.
 
 ---
 
