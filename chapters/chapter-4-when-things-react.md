@@ -36,9 +36,9 @@ The goal is to move from passive design to active execution, showcasing how a us
 
 > [interface.html](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/interface.html)
 
-> [style.css] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/style.css)
+> [style.css](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/style.css)
 
-> [logic.js] (https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/logic.js)
+> [logic.js](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/logic.js)
 
 **Focus:**
 
