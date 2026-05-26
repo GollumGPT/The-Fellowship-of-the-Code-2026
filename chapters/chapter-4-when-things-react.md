@@ -28,7 +28,6 @@ The goal is to move from passive design to active execution, showcasing how a us
 
 ## Artifact
 
-*`Adapt to your project...`*
 
 **File:** `[Name](Link)`
 
@@ -38,7 +37,7 @@ The goal is to move from passive design to active execution, showcasing how a us
 
 **Focus:**
 
-... [specific feature of the system / requirement addressed]
+Emergency Alert
 
 ---
 
