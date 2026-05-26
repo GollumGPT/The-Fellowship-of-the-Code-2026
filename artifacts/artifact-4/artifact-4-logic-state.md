@@ -40,7 +40,9 @@ There is no real backend, no database, and no real GPS tracking. The location "M
 
 **Assumption:** 
 **Active Signal Lock:** We assume the device already has a strong network connection before the screen opens. In the code, the bottom status pill immediately shines green (GPS Signal Locked) to reassure the user.
+
 **Stress Limits:** We assume the user has shaky hands and no time to type. The logic requires only two simple clicks with no annoying pop-ups or text inputs.
+
 **Sent Means Sent:** We assume that a broadcast cannot be stopped once it leaves the device. The logic enforces this by hiding the selection grid after sending, so the user cannot tamper with or break the running transmission.
 
 
