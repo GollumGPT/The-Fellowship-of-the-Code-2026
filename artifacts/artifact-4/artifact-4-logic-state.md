@@ -41,7 +41,3 @@ There is no real backend, no database, and no real GPS tracking. The location "M
 **Assumption:** The Fellowship understands what the current quest step means.
 
 ---
----
-
-
-*`This example technically works and shows interaction, but it has no stable state model and would be very difficult to extend, debug, or reason about in later assignments.`*
