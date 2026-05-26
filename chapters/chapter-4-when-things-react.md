@@ -1,6 +1,6 @@
 # The Red Book of Westmarch - Chapter IV: Application Logic & State
 
-*> "The Grey Pilgrim had said that there was hope, but only a fool's hope. Yet, even a fool's hope can guide the hand when the shadows lengthen." — *The Chronicles of the Companions*
+*`The Grey Pilgrim had said that there was hope, but only a fool's hope. Yet, even a fool's hope can guide the hand when the shadows lengthen." — *The Chronicles of the Companions`*
 
 **Table of Contents**
 
