@@ -82,3 +82,50 @@ alertButton.addEventListener("click", () => {
     }, 200);
 
 });
+    alertSent = true;
+
+    // Smartphone Vibration
+    if (navigator.vibrate) {
+        navigator.vibrate([300, 100, 300]);
+    }
+
+    // Sound abspielen
+    if (alertSound) {
+        alertSound.play();
+    }
+
+    // Button ändern
+    alertButton.textContent =
+        "HELP IS ON THE WAY";
+
+    alertButton.style.background =
+        "linear-gradient(180deg, #2d6a4f, #1b4332)";
+
+    // Status unten ändern
+    statusPill.textContent =
+        "Rescue team dispatched";
+
+    // Nachricht ändern
+    consequenceText.textContent =
+        `Your ${selectedHazard} alert has been received. Fellowship support units are now heading to your location.`;
+
+    // Hazard Buttons deaktivieren
+    tiles.forEach((tile) => {
+
+        tile.style.opacity = "0.6";
+        tile.style.pointerEvents = "none";
+
+    });
+
+    // Kleiner Klick-Effekt
+    alertButton.style.transform =
+        "scale(1.03)";
+
+    setTimeout(() => {
+
+        alertButton.style.transform =
+            "scale(1)";
+
+    }, 200);
+
+});
