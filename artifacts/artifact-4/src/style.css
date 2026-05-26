@@ -2,20 +2,20 @@
     /* LOTR Cinematic Palette */
     --color-gold: #dfb15b;
     --color-one-ring-glow: rgba(223, 177, 91, 0.3);
-    --color-forest: #112213; /* Deep Lothlórien Green */
+    --color-forest: #112213;
     --color-dark: #161512;
     --color-dark-soft: #1f1d19;
-    --color-border: #4a3f2c; /* Antique Iron / Bronze */
-    --color-danger: #7a0000; /* Mount Doom Crimson */
+    --color-border: #4a3f2c;
+    --color-danger: #7a0000;
     --color-danger-active: #ff3333;
     --color-text: #ded9d0;
     --color-muted: #8c8576;
-    --color-paper: #f4eae1; /* Elven Parchment / Pergament */
+    --color-paper: #f4eae1;
 
     /* Context Variables */
     --color-location-bg: #26221c;
     --color-back-hover: #2e2920;
-    --color-tile-selected-bg: #3d1414; /* Mordor Threat Selection */
+    --color-tile-selected-bg: #3d1414;
     --color-btn-disabled-bg: #2a2722;
     --color-btn-disabled-text: #666055;
     --color-status-border: #1b3d1d;
@@ -23,7 +23,7 @@
     --color-summary-timestamp: #8c8576;
 
     /* Borders & Ornaments */
-    --radius-sm: 4px; /* Sharper, more medieval look */
+    --radius-sm: 4px;
     --radius-md: 6px;
 
     --transition-fast: 0.2s ease;
@@ -195,11 +195,6 @@ button:focus-visible {
         opacity var(--transition-normal);
 }
 
-/* FIXED: Removed vertical floating transform on hover */
-.tile:hover:not(:disabled) {
-    border-color: var(--color-gold);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 8px var(--color-one-ring-glow);
-}
 
 .tile.selected {
     background: var(--color-tile-selected-bg);
@@ -255,10 +250,6 @@ button:focus-visible {
         box-shadow var(--transition-fast);
 }
 
-.btn-emergency:hover:not(:disabled) {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(122, 0, 0, 0.6), 0 0 10px var(--color-one-ring-glow);
-}
 
 .btn-emergency:active:not(:disabled) {
     transform: translateY(1px);
@@ -340,7 +331,7 @@ button:focus-visible {
 
 .status-pill {
     padding: 8px 22px;
-    border-radius: 4px; /* Match the antique theme */
+    border-radius: 4px;
     background: var(--color-dark);
     border: 1px solid var(--color-border);
     color: var(--color-status-text);
