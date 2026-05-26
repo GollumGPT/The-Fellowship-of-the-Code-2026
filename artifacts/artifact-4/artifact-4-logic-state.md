@@ -54,9 +54,9 @@ The current interaction flow improves the original Mermaid model in Assignment 2
 
 The implemented flow in the Fellowship Companion solves this by using clear and strict states:
 
-Setup state: The user selects a hazard before anything can be sent.
-Sending state: The interface is locked while the alert is being transmitted.
-Sent state: The interface switches to a final confirmation screen and cannot be used again for that alert.
+- Setup state: The user selects a hazard before anything can be sent.
+- Sending state: The interface is locked while the alert is being transmitted.
+- Sent state: The interface switches to a final confirmation screen and cannot be used again for that alert.
 
 This makes the system more predictable and easier to understand under stress.
 
@@ -87,12 +87,6 @@ This prototype intentionally excludes:
 
 The displayed location (“Mines of Moria”) is currently represented as a static string inside the frontend state object.
 
-These omissions keep the project focused entirely on:
-
-- frontend interaction design
-- state management
-- user experience under stress conditions
-
 ## Assumption
 
 **Active Signal Lock:** 
@@ -115,7 +109,7 @@ The entire emergency process requires only two simple interactions.
 **Sent Means Sent:** 
 
 The system assumes that emergency broadcasts are irreversible once transmitted.
-For this reason, the interface permanently transitions into summary mode after sending and removes access to the original hazard selection interface. This prevents post-send manipulation and preserves transmission integrity.
+For this reason, the interface transitions into summary mode after sending and removes access to the original hazard selection interface. This prevents post-send manipulation and preserves transmission integrity.
 
 
 ---
