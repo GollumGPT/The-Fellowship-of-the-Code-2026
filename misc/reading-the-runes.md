@@ -11,7 +11,7 @@ The UI should always display the current rations
 
 ## Identified Issues
 
-**Issue 1: Unstable state model (type inconsistency and implicit coercion)**
+**Issue 1: Type inconsistency**
 
 The application stores and manipulates the main state (`rations`) inconsistently as both a string and a number.
 
@@ -38,7 +38,7 @@ The system does not have a reliable data model. The same variable behaves differ
 
 In larger systems, this can lead to broken calculations, inconsistent stored data, and hard-to-trace logic errors.
 
-**Issue 2: Missing input validation (unsafe user input handling)**
+**Issue 2: Missing input validation**
 
 User input is taken directly from the DOM and used in arithmetic operations without validation or type checking.
 
@@ -70,6 +70,9 @@ Why this matters:
 The system does not define what valid input is. As a result, invalid data can enter the state layer directly, breaking core logic.
 
 **Issue 3: UI and state are not consistently synchronized**
+
+The UI update is not consistently aligned with state changes, particularly in the “Eat” logic.
+
 Where:
 ```js
 updateStatus();
@@ -88,5 +91,8 @@ This breaks the principle of state-driven UI rendering, where the interface shou
 
 
 ## AI Reflection
-AI helped identify the issues quickly. Especially useful for explaining string vs number behavior.
+First, we tested the application to understand its behaviour. This allowed us to identify the most obvious problem areas in the code. Afterwards, we used AI to double-check whether we had missed any relevant issues.
 
+In addition, we used AI to help structure our findings in a more systematic way by organising the problems using the “where / what happens / why this matters” format.
+
+At first, the AI described a large number of issues, but many of them were very similar or closely related. After asking for clarification, we realised that several of these points could be grouped together. As a result, we consolidated them into the three main issues described above.
