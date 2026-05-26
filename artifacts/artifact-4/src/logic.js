@@ -1,257 +1,84 @@
-// ==========================
-// STATE
-// ==========================
+const tiles = document.querySelectorAll(".tile");
+const alertButton = document.querySelector(".btn-emergency");
+const statusPill = document.querySelector(".status-pill");
+const consequenceText = document.querySelector(".consequence-text");
+const alertSound = document.querySelector("#alertSound");
 
-const state = {
-    currentLocation: "Mines of Moria",
-    isLocationDetected: true,
+let selectedHazard = "Orc Ambush";
+let alertSent = false;
 
-    selectedHazard: null,
+// Hazard auswählen
+tiles.forEach((tile) => {
 
-    isSending: false,
-    isSent: false
-};
+    tile.addEventListener("click", () => {
 
-// ==========================
-// CONSTANTS
-// ==========================
+        if (alertSent) return;
 
-const hazardNames = {
-    orks: "Orc Ambush (Combat Support)",
-    umwelt: "Trap / Hazard (Physical Danger)",
-    verlust: "Member Lost (Search Party)",
-    ring: "Nazgûl (Stealth Mode)"
-};
-
-// ==========================
-// DOM REFERENCES
-// ==========================
-
-const locationDisplay = document.getElementById('locationDisplay');
-
-const hazardTiles = document.querySelectorAll('.tile');
-
-const btnEmergency = document.getElementById('btnEmergency');
-
-const statusMessage = document.getElementById('statusMessage');
-
-const btnBack = document.getElementById('btnBack');
-
-const setupArea = document.getElementById('setupArea');
-
-const summaryArea = document.getElementById('summaryArea');
-
-const summaryLocation = document.getElementById('summaryLocation');
-
-const summaryHazard = document.getElementById('summaryHazard');
-
-// ==========================
-// HELPERS
-// ==========================
-
-function updateState(newState) {
-    Object.assign(state, newState);
-
-    renderUI();
-}
-
-function setEmergencyButton({
-    text,
-    disabled,
-    className
-}) {
-    btnEmergency.textContent = text;
-
-    btnEmergency.disabled = disabled;
-
-    btnEmergency.className = `btn-emergency ${className}`;
-}
-
-// ==========================
-// RENDER FUNCTIONS
-// ==========================
-
-function renderLocation() {
-
-    if (state.isLocationDetected) {
-
-        locationDisplay.textContent =
-            `${state.currentLocation} (Detected)`;
-
-        locationDisplay.style.color = "#111111";
-
-    } else {
-
-        locationDisplay.textContent =
-            "Searching Signal...";
-
-        locationDisplay.style.color = "#888888";
-    }
-}
-
-function renderTiles() {
-
-    hazardTiles.forEach(tile => {
-
-        const isSelected =
-            tile.dataset.hazard === state.selectedHazard;
-
-        tile.classList.toggle('selected', isSelected);
-
-        tile.setAttribute(
-            'aria-pressed',
-            isSelected
-        );
-    });
-}
-
-function renderSummary() {
-
-    if (state.isSent) {
-
-        setupArea.classList.add('hidden');
-
-        summaryArea.classList.remove('hidden');
-
-        summaryLocation.textContent =
-            state.currentLocation;
-
-        summaryHazard.textContent =
-            hazardNames[state.selectedHazard];
-
-    } else {
-
-        setupArea.classList.remove('hidden');
-
-        summaryArea.classList.add('hidden');
-    }
-}
-
-function renderButton() {
-
-    if (state.isSent) {
-
-        setEmergencyButton({
-            text: "ALERT TRANSMITTED",
-            disabled: true,
-            className: "success"
+        // Alte Auswahl entfernen
+        tiles.forEach((item) => {
+            item.classList.remove("selected");
         });
 
-        statusMessage.textContent =
-            "The Fellowship has been notified. Tactical support has been dispatched.";
+        // Neue Auswahl markieren
+        tile.classList.add("selected");
 
-        return;
-    }
-
-    if (state.isSending) {
-
-        setEmergencyButton({
-            text: "SENDING ALERT...",
-            disabled: true,
-            className: "loading"
-        });
-
-        statusMessage.textContent =
-            "Encrypting signal frequencies across Palantíri networks...";
-
-        return;
-    }
-
-    if (state.selectedHazard) {
-
-        setEmergencyButton({
-            text: "SEND ALERT NOW",
-            disabled: !state.isLocationDetected,
-            className: "default"
-        });
-
-        statusMessage.textContent =
-            "Warning: Pressing this button broadcasts your coordinates instantly.";
-
-        return;
-    }
-
-    setEmergencyButton({
-        text: "SEND ALERT NOW",
-        disabled: true,
-        className: ""
+        // Ausgewählten Hazard speichern
+        selectedHazard =
+            tile.querySelector(".tile-title").textContent;
     });
 
-    statusMessage.textContent =
-        "Please select a hazard level above to unlock the transmission.";
-}
-
-function renderUI() {
-
-    renderLocation();
-
-    renderTiles();
-
-    renderSummary();
-
-    renderButton();
-}
-
-// ==========================
-// EVENTS
-// ==========================
-
-hazardTiles.forEach(tile => {
-
-    tile.addEventListener('click', () => {
-
-        if (state.isSending || state.isSent) {
-            return;
-        }
-
-        const hazardId =
-            tile.dataset.hazard;
-
-        updateState({
-            selectedHazard:
-                state.selectedHazard === hazardId
-                    ? null
-                    : hazardId
-        });
-    });
 });
 
-btnEmergency.addEventListener('click', () => {
+// Emergency Alert senden
+alertButton.addEventListener("click", () => {
 
-    if (
-        !state.selectedHazard ||
-        state.isSending ||
-        state.isSent ||
-        !state.isLocationDetected
-    ) {
-        return;
+    // Verhindert mehrfaches Senden
+    if (alertSent) return;
+
+    alertSent = true;
+
+    // Smartphone Vibration
+    if (navigator.vibrate) {
+        navigator.vibrate([300, 100, 300]);
     }
 
-    updateState({
-        isSending: true
+    // Sound abspielen
+    if (alertSound) {
+        alertSound.play();
+    }
+
+    // Button ändern
+    alertButton.textContent =
+        "HELP IS ON THE WAY";
+
+    alertButton.style.background =
+        "linear-gradient(180deg, #2d6a4f, #1b4332)";
+
+    // Status unten ändern
+    statusPill.textContent =
+        "Rescue team dispatched";
+
+    // Nachricht ändern
+    consequenceText.textContent =
+        `Your ${selectedHazard} alert has been received. Fellowship support units are now heading to your location.`;
+
+    // Hazard Buttons deaktivieren
+    tiles.forEach((tile) => {
+
+        tile.style.opacity = "0.6";
+        tile.style.pointerEvents = "none";
+
     });
+
+    // Kleiner Klick-Effekt
+    alertButton.style.transform =
+        "scale(1.03)";
 
     setTimeout(() => {
 
-        updateState({
-            isSending: false,
-            isSent: true
-        });
+        alertButton.style.transform =
+            "scale(1)";
 
-    }, 1500);
+    }, 200);
+
 });
-
-btnBack.addEventListener('click', () => {
-
-    updateState({
-        selectedHazard: null,
-        isSending: false,
-        isSent: false
-    });
-});
-
-// ==========================
-// INIT
-// ==========================
-
-renderUI();
