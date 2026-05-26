@@ -30,7 +30,7 @@ As a result, the Fellowship can react faster, coordinate more effectively, and r
 
 `[Static Interface](/src/interface.html)`
 
-> For this example see [interface.html](./src/interface.html) *(**logic implementation:** [logic.weak.js](./src/logic.js))*
+> For this example see [interface.html](./src/interface.html) *(**logic implementation:** [logic.js](./src/logic.js))*
 
 ## Design Rationale
 
