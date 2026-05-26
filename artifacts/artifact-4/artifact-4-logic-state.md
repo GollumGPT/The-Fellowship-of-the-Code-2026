@@ -48,6 +48,8 @@ This prevents accidental or incomplete emergency broadcasts.
 
 **How does the behavior match the concept?**
 
+The interaction behavior is intentionally designed to reflect the urgency and simplicity of an emergency communication device used under extreme pressure.
+
 The interaction flow intentionally follows a highly simplified sequence:
 
 - Select a hazard
@@ -55,7 +57,7 @@ The interaction flow intentionally follows a highly simplified sequence:
 - Wait during transmission
 - Receive visual confirmation
 
-The short transmission delay and confirmation summary reassure the user that the signal has been successfully delivered and that assistance is on the way.
+The confirmation summary reassures the user that the signal has been successfully delivered and that assistance is on the way.
 
 **Constraints and System Boundaries:**
 
