@@ -55,12 +55,4 @@ We expected a clean JS structure to connect variables with the existing DOM and 
 
 ## Lessons Learned
 
-
-
----
-
-## Lessons Learned
-
-*`Adapt to your project...`*
-
-- Insights, challenges, reflections
+Building this page was a good way to learn how structure, style, and logic actually work together in a live system. We realized that while AI is great for a quick start, you can't just copy-paste everything. We learned that when a user is in a stressful situation, a simple interface is always better. By intentionally taking features away and locking choices down, we made the tool much more effective for a Fellowship member who needs to send an alert instantly.
