@@ -29,7 +29,9 @@ As a result, the Fellowship can react faster, coordinate more effectively, and r
 ##  Implementation
 
 > [interface.html](./src/interface.html)
+
 > [css](./src/css)
+
 > [logic.js](./src/logic.js))*
 
 ## Design Rationale
