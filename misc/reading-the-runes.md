@@ -112,12 +112,14 @@ This breaks the principle of state-driven UI rendering, where the interface shou
 ***Fix***
 
 ```js
-if (rations - value < 0) {
+const newValue = rations - value;
+
+if (newValue < 0) {
     alert("Not enough rations!");
     return;
 }
 
-rations = rations - value;
+rations = newValue;
 updateStatus();
 ```
 
