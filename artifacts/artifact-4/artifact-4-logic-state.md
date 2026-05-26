@@ -50,16 +50,17 @@ This prevents accidental or incomplete emergency broadcasts.
 
 **How does the behavior match the concept?**
 
-The interaction behavior is intentionally designed to reflect the urgency and simplicity of an emergency communication device used under extreme pressure.
+The current interaction flow improves the original Mermaid model in Assignment 2 by removing unclear and overlapping states such as “No alert sent” or “Wait / No Alert”.
 
-The interaction flow intentionally follows a highly simplified sequence:
+The implemented flow in the Fellowship Companion solves this by using clear and strict states:
 
-- Select a hazard
-- Press the emergency button
-- Wait during transmission
-- Receive visual confirmation
+Setup state: The user selects a hazard before anything can be sent.
+Sending state: The interface is locked while the alert is being transmitted.
+Sent state: The interface switches to a final confirmation screen and cannot be used again for that alert.
 
-The confirmation summary reassures the user that the signal has been successfully delivered and that assistance is on the way.
+This makes the system more predictable and easier to understand under stress.
+
+Overall, the behavior better matches the concept of a fast, reliable emergency system.
 
 **Constraints and System Boundaries:**
 
