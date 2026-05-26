@@ -6,6 +6,7 @@
 The "Emergency Hazard Alert". It lets a companion instantly send their location and a specific threat type to the rest of the group.
 
 **What state does it use or change?**
+
 It manages four simple state variables in JavaScript:
 - currentLocation: The name of the place (e.g., "Mines of Moria").
 - selectedHazard: The chosen danger (Orcs, Traps, etc.).
