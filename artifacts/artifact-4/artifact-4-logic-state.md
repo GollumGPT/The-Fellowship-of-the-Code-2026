@@ -3,7 +3,7 @@
 ## System Capability
 
 **Which capability are you implementing?**
-The "Emergency Hazard Alert". It lets a Fellowship member select a danger and send their location to the team immediately.
+The "Emergency Hazard Alert". It lets a companion instantly send their location and a specific threat type to the rest of the group.
 
 **What state does it use or change?**
 It manages four simple state variables in JavaScript:
@@ -13,7 +13,7 @@ It manages four simple state variables in JavaScript:
 - isSent: True after sending is successful (changes the screen view).
 
 **Why does it matter for the Fellowship right now?**
-In dangerous places like Moria, companions need to send a warning in less than two seconds without shouting. This tool saves lives through fast, silent communication.
+In situations like Amon Hen, Boromir's horn was too late and lacked clear information. This digital alert saves lives because the team instantly sees exactly **what** the danger is and **where** it is happening, allowing a fast, coordinated rescue.
 
 ## Static Interface Implementation
 
@@ -24,7 +24,7 @@ In dangerous places like Moria, companions need to send a warning in less than t
 ## Design Rationale
 
 **How does the logic support the goal?**
-The main button is grey and disabled at first. It only becomes active when a hazard is clicked. This prevents accidental false alarms while walking.
+Our goal is to reduce mistakes under heavy time pressure. The logic ensures that the main button stays disabled and grey until a danger type is clicked. This prevents accidental false alarms inside a pocket while walking.
 
 **How does the behavior match the concept?**
 It follows a clear step-by-step flow: Select a hazard 
@@ -38,6 +38,11 @@ We deliberately introduced a hard interaction lock. Once the alert status is set
 **Deliberate Omissions (Scope Limitation):**
 There is no real backend, no database, and no real GPS tracking. The location "Mines of Moria" is a simple text string in the code. This keeps the focus 100% on the frontend design.
 
-**Assumption:** The Fellowship understands what the current quest step means.
+**Assumption:** 
+**Active Signal Lock:** We assume the device already has a strong network connection before the screen opens. In the code, the bottom status pill immediately shines green (GPS Signal Locked) to reassure the user.
+**Stress Limits:** We assume the user has shaky hands and no time to type. The logic requires only two simple clicks with no annoying pop-ups or text inputs.
+**Sent Means Sent:** We assume that a broadcast cannot be stopped once it leaves the device. The logic enforces this by hiding the selection grid after sending, so the user cannot tamper with or break the running transmission.
+
+
 
 ---
