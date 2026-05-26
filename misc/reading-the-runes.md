@@ -26,9 +26,12 @@ rations = rations - value;
 ***What happens:***
 
 The + operator performs string concatenation:
-´"10" + "5" → "105"´
+
+```"10" + "5" → "105"```
+
 The - operator forces implicit numeric conversion:
-´"10" - "5" → 5´
+
+```"10" - "5" → 5```
 
 This leads to inconsistent behaviour depending on the operation.
 
