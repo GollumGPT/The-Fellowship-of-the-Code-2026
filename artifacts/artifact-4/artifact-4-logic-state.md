@@ -87,7 +87,7 @@ This prototype intentionally excludes:
 
 The displayed location (“Mines of Moria”) is currently represented as a static string inside the frontend state object.
 
-## Assumption
+## Assumptions
 
 **Active Signal Lock:** 
 
