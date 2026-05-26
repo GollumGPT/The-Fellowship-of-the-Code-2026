@@ -2,198 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    />
+    <title>Fellowship Companion - Emergency Alert</title>
 
-    <title>The Fellowship Companion</title>
-
-    <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="app-container">
 
-        <!-- HEADER -->
+        <!-- Header -->
         <header class="app-header">
 
-            <button
-                class="btn-back"
-                id="btnBack"
-                aria-label="Go back"
-            >
-                <span class="back-arrow">&lsaquo;</span>
+            <button type="button" class="btn-back">
+                &lsaquo;
             </button>
 
-            <h1 class="app-title">
-                Emergency Alert
-            </h1>
+            <h1>Emergency Alert</h1>
 
             <div class="spacer"></div>
 
         </header>
 
-        <!-- MAIN -->
-        <main>
+        <!-- Main Content -->
+        <main class="content">
 
-            <!-- SETUP -->
-            <section
-                class="setup-area"
-                id="setupArea"
-            >
-
-                <!-- LOCATION -->
-                <section class="info-group">
-
-                    <span class="label-tiny">
-                        Current Location
-                    </span>
-
-                    <div
-                        class="location-badge"
-                        id="locationDisplay"
-                    >
-                        Locating...
-                    </div>
-
-                </section>
-
-                <!-- HAZARDS -->
-                <section class="info-group">
-
-                    <span class="label-tiny">
-                        Select Type of Hazard
-                    </span>
-
-                    <div class="hazard-grid">
-
-                        <button
-                            class="tile"
-                            data-hazard="orks"
-                            aria-pressed="false"
-                        >
-                            <span class="tile-title">
-                                Orc Ambush
-                            </span>
-
-                            <span class="tile-desc">
-                                Combat Support
-                            </span>
-                        </button>
-
-                        <button
-                            class="tile"
-                            data-hazard="umwelt"
-                            aria-pressed="false"
-                        >
-                            <span class="tile-title">
-                                Trap / Hazard
-                            </span>
-
-                            <span class="tile-desc">
-                                Physical Danger
-                            </span>
-                        </button>
-
-                        <button
-                            class="tile"
-                            data-hazard="verlust"
-                            aria-pressed="false"
-                        >
-                            <span class="tile-title">
-                                Member Lost
-                            </span>
-
-                            <span class="tile-desc">
-                                Search Party
-                            </span>
-                        </button>
-
-                        <button
-                            class="tile"
-                            data-hazard="ring"
-                            aria-pressed="false"
-                        >
-                            <span class="tile-title">
-                                Nazgûl
-                            </span>
-
-                            <span class="tile-desc">
-                                Stealth Mode
-                            </span>
-                        </button>
-
-                    </div>
-
-                </section>
-
-            </section>
-
-            <!-- SUMMARY -->
-            <section
-                class="summary-area hidden"
-                id="summaryArea"
-            >
-
-                <section class="info-group">
-
-                    <span class="label-tiny">
-                        Transmission Status
-                    </span>
-
-                    <div class="summary-card">
-
-                        <h3>
-                            SIGNAL TRANSMITTED
-                        </h3>
-
-                        <p>
-                            <strong>Location:</strong>
-                            <span id="summaryLocation"></span>
-                        </p>
-
-                        <p>
-                            <strong>Selected Threat:</strong>
-                            <span id="summaryHazard"></span>
-                        </p>
-
-                        <p class="summary-timestamp">
-                            Dispatched via Palantír Broadcast Network
-                        </p>
-
-                    </div>
-
-                </section>
-
-            </section>
-
-            <!-- ACTION -->
+            <!-- Location -->
             <section class="info-group">
 
-                <button
-                    class="btn-emergency"
-                    id="btnEmergency"
-                    disabled
-                >
+                <label class="label-tiny">
+                    Current Location
+                </label>
+
+                <div class="location-badge">
+                    Mines of Moria (Detected)
+                </div>
+
+            </section>
+
+            <!-- Hazard Selection -->
+            <section class="info-group">
+
+                <label class="label-tiny">
+                    Type of Hazard
+                </label>
+
+                <div class="hazard-grid">
+
+                    <button type="button" class="tile selected">
+
+                        <span class="tile-title">
+                            Orc Ambush
+                        </span>
+
+                        <span class="tile-desc">
+                            Combat Support
+                        </span>
+
+                    </button>
+
+                    <button type="button" class="tile">
+
+                        <span class="tile-title">
+                            Nazgûl
+                        </span>
+
+                        <span class="tile-desc">
+                            Stealth Mode
+                        </span>
+
+                    </button>
+
+                    <button type="button" class="tile">
+
+                        <span class="tile-title">
+                            Member Lost
+                        </span>
+
+                        <span class="tile-desc">
+                            Search Party
+                        </span>
+
+                    </button>
+
+                    <button type="button" class="tile">
+
+                        <span class="tile-title">
+                            Trap
+                        </span>
+
+                        <span class="tile-desc">
+                            Physical Danger
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- Emergency Button -->
+            <section class="action-area">
+
+                <button type="button" class="btn-emergency">
                     SEND ALERT NOW
                 </button>
 
-                <p
-                    class="consequence-text"
-                    id="statusMessage"
-                >
-                    Please select a hazard level above to unlock the transmission.
+                <p class="consequence-text">
+                    This will broadcast your coordinates and the selected hazard
+                    to all Fellowship members immediately.
                 </p>
 
             </section>
 
         </main>
 
-        <!-- FOOTER -->
+        <!-- Footer -->
         <footer class="app-footer">
 
             <div class="status-pill">
@@ -204,7 +132,15 @@
 
     </div>
 
-    <script src="app.js"></script>
+    <!-- Alert Sound -->
+    <audio id="alertSound">
+
+        <source src="alert.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 
