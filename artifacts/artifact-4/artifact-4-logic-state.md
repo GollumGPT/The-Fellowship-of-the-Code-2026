@@ -1,12 +1,19 @@
 # The Fellowship Companion - Artifact IV: Logic & State
 
-*`(For demonstration purposes only)`*
-
 ## System Capability
 
-**Track the Fellowship's current quest step.**
+**Which capability are you implementing?**
+The "Emergency Hazard Alert". It lets a Fellowship member select a danger and send their location to the team immediately.
 
-Track the Fellowship's progress through the quest.
+**What state does it use or change?**
+It manages four simple state variables in JavaScript:
+- currentLocation: The name of the place (e.g., "Mines of Moria").
+- selectedHazard: The chosen danger (Orcs, Traps, etc.).
+- isSending: True while the message is being sent (blocks double-clicks).
+- isSent: True after sending is successful (changes the screen view).
+
+**Why does it matter for the Fellowship right now?**
+In dangerous places like Moria, companions need to send a warning in less than two seconds without shouting. This tool saves lives through fast, silent communication.
 
 ## Static Interface Implementation
 
@@ -16,40 +23,25 @@ Track the Fellowship's progress through the quest.
 
 ## Design Rationale
 
-This logic supports the intent because when the user clicks the button, the quest step changes. The JavaScript follows the interface and updates what the user sees. I did not add advanced logic because this is a simple example.
+**How does the logic support the goal?**
+The main button is grey and disabled at first. It only becomes active when a hazard is clicked. This prevents accidental false alarms while walking.
+
+**How does the behavior match the concept?**
+It follows a clear step-by-step flow: Select a hazard 
+Click the red button 
+Wait 1.5 seconds (sending animation) 
+See the final summary card.
+
+**Constraints and System Boundaries:**
+We deliberately introduced a hard interaction lock. Once the alert status is set to isSent, the setup interface is systematically destroyed and replaced by the summary. The user cannot loop infinitely or toggle hazards post-send. The green status-pill acts as an independent system health indicator, signaling to the user that the background GPS service remains locked even after a broadcast.
+
+**Deliberate Omissions (Scope Limitation):**
+There is no real backend, no database, and no real GPS tracking. The location "Mines of Moria" is a simple text string in the code. This keeps the focus 100% on the frontend design.
 
 **Assumption:** The Fellowship understands what the current quest step means.
 
 ---
 ---
 
-## Why this is weak
-
-- **Capability is too vague:** *"Track the current quest step"* is not a clearly scoped capability.
-- **No concrete context:** No reference to why the step changes, who triggers it, or what constraints apply.
-- **Logic & State issues:**
-  - **UI text is the state**
-    - Logic depends on string matching
-    - Copy changes break behavior
-  - **No constraints**
-    - You can loop forever
-    - No "end" condition
-  - **Silent fallback**
-    - Invalid states reset without explanation
-  - **Event-driven, not system-driven**
-    - Clicking causes change
-    - Not rules, intent, or context
-  - **Impossible to extend cleanly**
-    - Adding one step means rewriting conditionals
-    - No structure to reason about
-- **Flow & Consistency issues:**
-  - Flow from Assignment 2 is not represented
-  - Behavior is linear by accident, not by design
-- **Conceptual issues:**
-  - Could belong to any app, not this system
-  - The Logic does not express intent - it merely updates text
-- **Design rationale is superficial:** Restates the assignment constraints instead of reflecting on decisions.
-- **Assumptions are not examined:** *"The Fellowship understands the quest step"* avoids responsibility instead of reasoning.
-- **No linkage:** Weak or missing connection to Assignment 1 (situation/intent), Assignment 2 (decisions), and Assignment 3 (representation).
 
 *`This example technically works and shows interaction, but it has no stable state model and would be very difficult to extend, debug, or reason about in later assignments.`*
