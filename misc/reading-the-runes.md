@@ -41,7 +41,7 @@ The system does not have a reliable data model. The same variable behaves differ
 
 In larger systems, this can lead to broken calculations, inconsistent stored data, and hard-to-trace logic errors.
 
-***Fix***
+***Fix:***
 
 ```js
 let rations = 10;
@@ -81,7 +81,7 @@ This can result in:
 
 The system does not define what valid input is. As a result, invalid data can enter the state layer directly, breaking core logic.
 
-***Fix***
+***Fix:***
 
 ```js
 const value = Number(amountInput.value);
@@ -112,7 +112,7 @@ The UI is updated before the state is validated or modified. This can result in 
 ***Why this matters:***
 This breaks the principle of state-driven UI rendering, where the interface should always reflect the current state. Inconsistent ordering leads to confusing user experiences.
 
-***Fix***
+***Fix:***
 
 ```js
 const newValue = rations - value;
