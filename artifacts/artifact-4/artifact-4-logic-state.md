@@ -20,7 +20,7 @@ In situations like Amon Hen, Boromir's horn was too late and lacked clear inform
 
 `[Static Interface](/src/interface.html)`
 
-> For this example see [interface.weak.html](/src/interface.weak.html) *(**logic implementation:** [logic.weak.js](/src/logic.weak.js))*
+> For this example see [interface.html](/src/interface.html) *(**logic implementation:** [logic.weak.js](/src/logic.weak.js))*
 
 ## Design Rationale
 
