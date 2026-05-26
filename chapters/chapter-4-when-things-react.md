@@ -48,13 +48,15 @@ Emergency Alert
 
 ## AI Assistance
 
-We expected the AI to provide a highly streamlined template that integrated state variables natively into the existing DOM architecture without breaking the established Lore-appropriate CSS themes.
+> We expected a clean JS structure to connect variables with the existing DOM and CSS.
+> The AI provided a minimalist script using guard clauses.
 
-The AI provided a clean script that linked state modifications directly to structural layout mutations. It also suggested native browser API integration (like navigator.vibrate) to enrich tactical feedback without adding bulky external dependencies. It helped by emphasizing a minimalist architectural style (using guard clauses instead of deep nested if/else wrappers).
 
-I manually removed external media asset logic (like an un-embedded .mp3 audio element tracker) to ensure the client-side code remains entirely self-contained, lightweight, and robust against broken asset links.
+---
 
-I would explore defining the UI transitions entirely via declarative CSS state classes (e.g., adding a .state-sent class to the parent container) rather than directly overriding inline styles in JavaScript, further separating logic from visual presentation rules.
+## Lessons Learned
+
+
 
 ---
 
