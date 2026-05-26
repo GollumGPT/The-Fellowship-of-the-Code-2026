@@ -26,11 +26,11 @@ This emergency system improves coordination by instantly communicating:
 
 As a result, the Fellowship can react faster, coordinate more effectively, and reduce confusion during critical moments.
 
-## Static Interface Implementation
+##  Implementation
 
-`[Static Interface](/src/interface.html)`
-
-> For this example see [interface.html](./src/interface.html) *(**logic implementation:** [logic.js](./src/logic.js))*
+> [interface.html](./src/interface.html)
+> [css](./src/css)
+> [logic.js](./src/logic.js))*
 
 ## Design Rationale
 
