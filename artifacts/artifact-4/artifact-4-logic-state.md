@@ -3,6 +3,7 @@
 ## System Capability
 
 **Which capability are you implementing?**
+
 The implemented capability is the Emergency Hazard Alert system. It allows a Fellowship member to instantly broadcast their current location together with a selected threat type to the rest of the group.
 
 **What state does it use or change?**
@@ -15,6 +16,7 @@ The interface manages four primary state variables in JavaScript:
 - isSent: Becomes true after the transmission has completed successfully. This permanently switches the interface into confirmation mode.
 
 **Why does it matter for the Fellowship right now?**
+
 During high-risk situations such as the attack at Amon Hen, traditional warning methods like Boromir’s horn provided limited contextual information and arrived too late.
 
 This emergency system improves coordination by instantly communicating:
@@ -33,6 +35,7 @@ As a result, the Fellowship can react faster, coordinate more effectively, and r
 ## Design Rationale
 
 **How does the logic support the goal?**
+
 The primary design goal is to reduce user mistakes under extreme stress and time pressure.
 
 The system logic enforces this by:
@@ -55,6 +58,7 @@ The interaction flow intentionally follows a highly simplified sequence:
 The short transmission delay and confirmation summary reassure the user that the signal has been successfully delivered and that assistance is on the way.
 
 **Constraints and System Boundaries:**
+
 The application deliberately uses a strict interaction lock after transmission.
 
 Once the system state changes to isSent:
@@ -68,6 +72,7 @@ This prevents users from modifying or corrupting an already dispatched alert.
 Additionally, the persistent green “GPS Signal Locked” status pill functions independently from the transmission state. It continuously communicates that the device maintains an active positional signal even after an alert has been sent.
 
 **Deliberate Omissions (Scope Limitation):**
+
 This prototype intentionally excludes:
 
 - a real backend infrastructure
@@ -86,10 +91,12 @@ These omissions keep the project focused entirely on:
 **Assumption:** 
 
 **Active Signal Lock:** 
+
 The system assumes that the device already has an active network and positioning connection before the interface is opened.
 This assumption is visually reinforced through the permanently active green status indicator (“GPS Signal Locked”).
 
 **Stress Limits:** 
+
 The interface assumes that the user may be operating under panic or physical stress.
 
 To minimize cognitive load:
@@ -101,6 +108,7 @@ To minimize cognitive load:
 The entire emergency process requires only two simple interactions.
 
 **Sent Means Sent:** 
+
 The system assumes that emergency broadcasts are irreversible once transmitted.
 For this reason, the interface permanently transitions into summary mode after sending and removes access to the original hazard selection interface. This prevents post-send manipulation and preserves transmission integrity.
 
