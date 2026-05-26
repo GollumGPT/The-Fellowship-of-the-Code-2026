@@ -11,68 +11,80 @@ The UI should always display the current rations
 
 ## Identified Issues
 
-**Issue 1: Rations are stored as a string (type design error)**
+**Issue 1: Unstable state model (type inconsistency and implicit coercion)**
+
+The application stores and manipulates the main state (`rations`) inconsistently as both a string and a number.
+
+Where:
 
 ```js
-let rations = 10;
-rations = rations + 5;
-```
-
-Because rations is a string, this line:
+let rations = "10";
+const value = amountInput.value;
 rations = rations + value;
-performs string concatenation instead of numeric addition.
+rations = rations - value;
+```
+What happens:
 
-The state alternates between string and number behavior depending on the operator.
-"10" + "5" → "105"
-"105" - "2" → 103
+The + operator performs string concatenation:
+´"10" + "5" → "105"´
+The - operator forces implicit numeric conversion:
+´"10" - "5" → 5´
 
-## Why the Issues Matter
+This leads to inconsistent behaviour depending on the operation.
 
-This matters because the app does not work properly. Users could get confused.
+Why this matters:
 
-## Fixes
+The system does not have a reliable data model. The same variable behaves differently depending on the operator used. This creates silent state corruption, where values appear valid in the UI but are logically incorrect.
 
-I fixed the code by converting everything to numbers and moving some lines around.
+In larger systems, this can lead to broken calculations, inconsistent stored data, and hard-to-trace logic errors.
 
-    rations = Number(rations) + Number(value);
+**Issue 2: Missing input validation (unsafe user input handling)**
 
-## AI Assistance Reflection
+User input is taken directly from the DOM and used in arithmetic operations without validation or type checking.
 
-- I asked ChatGPT to fix the code. It gave me the correct solution.
-- I learned that JavaScript has problems with strings and numbers.
-
-
-## Application Description
-
-The application is designed to manage rations.
-The user can enter a value and either add it to the total or consume it.
-The current amount is displayed in the interface.
-
-
-## Issues
-
-**Issue 1**
-Since rations is a string, JavaScript concatenates instead of adding → "10" + 5 = "105"
-Wrong Data Type (String instead of Number)
-It occurs in:
-
+Where:
 ```js
-let rations = 10;
-rations = rations + 5;
+const value = amountInput.value;
 ```
-rations = rations + value;
+
+The input is used directly without validation or type conversion. This allows:
+
+Invalid inputs such as:
+
+- "apples"
+- "" (empty input)
+- negative numbers
+- non-integer values
+
+can all be processed by the system.
+
+This can result in:
+
+- NaN values
+- unintended arithmetic results
+- logical corruption of the ration count
 
 
-**Issue 2**
-Users can enter values like "apples", which leads to **NaN** or unpredictable results.
-No Input Validation (User can enter text)
-It occurs in button Eat Rations
+Why this matters:
 
+The system does not define what valid input is. As a result, invalid data can enter the state layer directly, breaking core logic.
 
-## Why These Issues Matter
-1. Users get confused when numbers behave incorrectly (e.g. 10 → 105).
-2. Wrong data types cause inconsistent behavior.
-3. Missing validation can break the application and lead to future bugs.
+**Issue 3: UI and state are not consistently synchronized**
+Where:
+```js
+updateStatus();
+
+if (rations - value < 0) {
+    alert("Not enough rations!");
+} else {
+    rations = rations - value;
+}
+```
+What happens:
+The UI is updated before the state is validated or modified. This can result in the displayed value not matching the actual state at the moment of interaction.
+
+Why this matters:
+This breaks the principle of state-driven UI rendering, where the interface should always reflect the current state. Inconsistent ordering leads to confusing user experiences.
 
 
 ## AI Reflection
