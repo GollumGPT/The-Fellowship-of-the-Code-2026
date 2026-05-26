@@ -3,18 +3,26 @@
 ## System Capability
 
 **Which capability are you implementing?**
-The "Emergency Hazard Alert". It lets a companion instantly send their location and a specific threat type to the rest of the group.
+The implemented capability is the Emergency Hazard Alert system. It allows a Fellowship member to instantly broadcast their current location together with a selected threat type to the rest of the group.
 
 **What state does it use or change?**
 
-It manages four simple state variables in JavaScript:
-- currentLocation: The name of the place (e.g., "Mines of Moria").
-- selectedHazard: The chosen danger (Orcs, Traps, etc.).
-- isSending: True while the message is being sent (blocks double-clicks).
-- isSent: True after sending is successful (changes the screen view).
+The interface manages four primary state variables in JavaScript:
+
+- currentLocation: Stores the current location name (e.g., “Mines of Moria”).
+- selectedHazard: Stores the currently selected danger type (Orcs, Traps, Nazgûl, etc.).
+- isSending:Becomes true while the alert transmission is in progress. This prevents duplicate transmissions and blocks repeated button presses.
+- isSent: Becomes true after the transmission has completed successfully. This permanently switches the interface into confirmation mode.
 
 **Why does it matter for the Fellowship right now?**
-In situations like Amon Hen, Boromir's horn was too late and lacked clear information. This digital alert saves lives because the team instantly sees exactly **what** the danger is and **where** it is happening, allowing a fast, coordinated rescue.
+During high-risk situations such as the attack at Amon Hen, traditional warning methods like Boromir’s horn provided limited contextual information and arrived too late.
+
+This emergency system improves coordination by instantly communicating:
+
+- the exact location of the danger
+- the specific type of threat
+
+As a result, the Fellowship can react faster, coordinate more effectively, and reduce confusion during critical moments.
 
 ## Static Interface Implementation
 
@@ -25,29 +33,76 @@ In situations like Amon Hen, Boromir's horn was too late and lacked clear inform
 ## Design Rationale
 
 **How does the logic support the goal?**
-Our goal is to reduce mistakes under heavy time pressure. The logic ensures that the main button stays disabled and grey until a danger type is clicked. This prevents accidental false alarms inside a pocket while walking.
+The primary design goal is to reduce user mistakes under extreme stress and time pressure.
+
+The system logic enforces this by:
+
+- keeping the emergency button disabled by default
+- requiring an explicit hazard selection before transmission is possible
+- visually unlocking the interface only after a valid selection
+
+This prevents accidental or incomplete emergency broadcasts.
 
 **How does the behavior match the concept?**
-It follows a clear step-by-step flow: 
-- Select a hazard 
-- Click the red button 
-- Wait 1.5 seconds (sending animation) 
-- View final confirmation summary. This gives the stressed user immediate peace of mind that help is on the way.
+
+The interaction flow intentionally follows a highly simplified sequence:
+
+- Select a hazard
+- Press the emergency button
+- Wait during transmission
+- Receive visual confirmation
+
+The short transmission delay and confirmation summary reassure the user that the signal has been successfully delivered and that assistance is on the way.
 
 **Constraints and System Boundaries:**
-We deliberately introduced a hard interaction lock. Once the alert status is set to isSent, the setup interface is systematically destroyed and replaced by the summary. The user cannot loop infinitely or toggle hazards post-send. The green status-pill acts as an independent system health indicator, signaling to the user that the background GPS service remains locked even after a broadcast.
+The application deliberately uses a strict interaction lock after transmission.
+
+Once the system state changes to isSent:
+
+- the setup interface is hidden
+- the selection grid becomes inaccessible
+- interaction with hazard controls is disabled
+
+This prevents users from modifying or corrupting an already dispatched alert.
+
+Additionally, the persistent green “GPS Signal Locked” status pill functions independently from the transmission state. It continuously communicates that the device maintains an active positional signal even after an alert has been sent.
 
 **Deliberate Omissions (Scope Limitation):**
-There is no real backend, no database, and no real GPS tracking. The location "Mines of Moria" is a simple text string in the code. This keeps the focus 100% on the frontend design.
+This prototype intentionally excludes:
+
+- a real backend infrastructure
+- persistent databases
+- actual GPS hardware integration
+- real-time networking
+
+The displayed location (“Mines of Moria”) is currently represented as a static string inside the frontend state object.
+
+These omissions keep the project focused entirely on:
+
+- frontend interaction design
+- state management
+- user experience under stress conditions
 
 **Assumption:** 
 
-**Active Signal Lock:** We assume the device already has a strong network connection before the screen opens. In the code, the bottom status pill immediately shines green (GPS Signal Locked) to reassure the user.
+**Active Signal Lock:** 
+The system assumes that the device already has an active network and positioning connection before the interface is opened.
+This assumption is visually reinforced through the permanently active green status indicator (“GPS Signal Locked”).
 
-**Stress Limits:** We assume the user has shaky hands and no time to type. The logic requires only two simple clicks with no annoying pop-ups or text inputs.
+**Stress Limits:** 
+The interface assumes that the user may be operating under panic or physical stress.
 
-**Sent Means Sent:** We assume that a broadcast cannot be stopped once it leaves the device. The logic enforces this by hiding the selection grid after sending, so the user cannot tamper with or break the running transmission.
+To minimize cognitive load:
 
+- no typing is required
+- no menus must be navigated
+- no confirmation pop-ups interrupt the workflow
+
+The entire emergency process requires only two simple interactions.
+
+**Sent Means Sent:** 
+The system assumes that emergency broadcasts are irreversible once transmitted.
+For this reason, the interface permanently transitions into summary mode after sending and removes access to the original hazard selection interface. This prevents post-send manipulation and preserves transmission integrity.
 
 
 ---
