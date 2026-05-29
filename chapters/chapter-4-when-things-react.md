@@ -1,6 +1,6 @@
 # The Red Book of Westmarch - Chapter IV: Application Logic & State
 
-*`"The Grey Pilgrim had said that there was hope, but only a fool's hope. Yet, even a fool's hope can guide the hand when the shadows lengthen." — The Chronicles of the Companions`*
+*`"The burned hand teaches best." — Gandalf`*
 
 **Table of Contents**
 
@@ -14,15 +14,16 @@
 
 ## Summary
 
-This chapter focuses on transforming the static user interface of **The Fellowship Companion** into an interactive, functional slice of application logic. Using the **Emergency Alert** capability established in prior phases, state and logic are introduced via plain JavaScript. 
+In this assignment, we turned our static interface into a working interactive system using plain JavaScript. The implemented feature is the Emergency Hazard Alert from The Fellowship Companion.
 
-The goal is to move from passive design to active execution, showcasing how a user under extreme situational stress interacts with the tool, how the system locks down options to prevent user error during a crisis, and how immediate UI feedback stabilizes a chaotic situation.
+The goal was to turn the design into a working interactive system. It shows how a user in a stressful emergency situation uses the tool, how the system prevents mistakes by locking certain actions, and how fast visual feedback helps the user stay calm and informed.
 
 **Learning Outcomes**
 
-- Understand the core relationship between application state, logic constraints, and UI updates.
-- Apply vanilla JavaScript to express real-world tactical behavior without relying on bulky frameworks.
-- Reflect on how logic constraints (such as disabling elements post-click) shape the user experience more powerfully than raw visual design.
+- Learned how to use JavaScript for interactive interfaces
+- Understood how state variables control UI behavior
+- Learned how interface restrictions can prevent user mistakes
+- Learned how important simplicity is in stressful emergency situations
 
 ---
 
@@ -30,15 +31,15 @@ The goal is to move from passive design to active execution, showcasing how a us
 
 
 **File:** 
-> [Artifact 4](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/tree/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-3)
+> [Artifact 4 Logic & State](.artifacts/artifact-4/artifact-4-logic-state.html)
 
 **Build:**
 
-> [interface.html](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/interface.html)
+> [interface.html](.artifacts/artifact-4/src/interface.html)
 
-> [style.css](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/style.css)
+> [style.css](.artifacts/artifact-4/src/style.css)
 
-> [logic.js](https://github.com/GollumGPT/The-Fellowship-of-the-Code-2026/blob/ea2750fe12f88e6937f355381e260906c0cc7bf6/artifacts/artifact-4/src/logic.js)
+> [logic.js](.artifacts/artifact-4/src/logic.js)
 
 **Focus:**
 
@@ -48,11 +49,14 @@ Emergency Alert
 
 ## AI Assistance
 
-We expected a clean JS structure to connect variables with the existing DOM and CSS. The AI provided a minimalist script using guard clauses.
-
+- helping with JavaScript logic
+- improving state handling
+- debugging interaction problems
+- improving wording and structure
+- helping explain design decisions more clearly
 
 ---
 
 ## Lessons Learned
 
-Building this page was a good way to learn how structure, style, and logic actually work together in a live system. We realized that while AI is great for a quick start, you can't just copy-paste everything. We learned that when a user is in a stressful situation, a simple interface is always better. By intentionally taking features away and locking choices down, we made the tool much more effective for a Fellowship member who needs to send an alert instantly.
+We learened how structure, style, and logic actually work together in a live system. We realized that while AI is great for a quick start, you can't just copy-paste everything. We learned that when a user is in a stressful situation, a simple interface is always better. By intentionally taking features away and locking choices down, we made the tool much more effective for a Fellowship member who needs to send an alert instantly.
