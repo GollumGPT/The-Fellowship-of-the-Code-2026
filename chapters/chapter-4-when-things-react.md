@@ -1,10 +1,10 @@
-# The Red Book of Westmarch - Chapter IV: Application Logic & State
+# The Red Book of Westmarch - Chapter IV: When Things React
 
 *`"The burned hand teaches best." — Gandalf`*
 
 **Table of Contents**
 
-- [The Red Book of Westmarch - Chapter X: Title](#the-red-book-of-westmarch---chapter-x-title)
+- [The Red Book of Westmarch - Chapter IV: When Things React](#the-red-book-of-westmarch---chapter-4-When-Things-React)
   - [Summary](#summary)
   - [Artifact](#artifact)
   - [AI Assistance](#ai-assistance)
@@ -31,7 +31,7 @@ The goal was to turn the design into a working interactive system. It shows how 
 
 
 **File:** 
-> [Artifact 4 Logic & State](.artifacts/artifact-4/artifact-4-logic-state.html)
+> [Artifact 4 Logic & State](artifacts/artifact-4/artifact-4-logic-state.html)
 
 **Build:**
 
