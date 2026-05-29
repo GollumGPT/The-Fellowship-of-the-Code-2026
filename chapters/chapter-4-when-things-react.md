@@ -31,7 +31,7 @@ The goal was to turn the design into a working interactive system. It shows how 
 
 
 **File:** 
-> [Artifact 4 Logic & State](../artifacts/artifact-4/artifact-4-logic-state.html)
+> [Artifact 4 Logic & State](../artifacts/artifact-4/artifact-4-logic-state.md)
 
 **Build:**
 
