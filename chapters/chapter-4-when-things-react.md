@@ -35,11 +35,11 @@ The goal was to turn the design into a working interactive system. It shows how 
 
 **Build:**
 
-> [interface.html](.artifacts/artifact-4/src/interface.html)
+> [interface.html](../artifacts/artifact-4/src/interface.html)
 
-> [style.css](.artifacts/artifact-4/src/style.css)
+> [style.css](../artifacts/artifact-4/src/style.css)
 
-> [logic.js](.artifacts/artifact-4/src/logic.js)
+> [logic.js](../artifacts/artifact-4/src/logic.js)
 
 **Focus:**
 
