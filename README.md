@@ -92,3 +92,5 @@ As a result, no one knows where help is needed, how urgent the situation is, or 
 | 1.12    | 2026-05-26 | Updated style.css |
 | 1.13   | 2026-05-26 | Updated interface.html |
 | 1.14    | 2026-05-26 | Added logic.js |
+| 1.15    | 2026-05-26 | Wrote mics Reading the runes |
+| 1.16    | 2026-05-29 | Wrote Chapter 4 |
