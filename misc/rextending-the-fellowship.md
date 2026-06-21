@@ -4,4 +4,4 @@
 "Path to Mordor" is a low-code 2D endless runner built using MakeCode Arcade (JavaScript). The player controls Frodo Baggins as he navigates the dangerous path to Mount Doom. The objective is to survive as long as possible by dodging incoming Orcs while collecting Lembas bread for bonus points. 
 
 **App Link:**
-[Play "Path to Mordor" here](Insert_Your_MakeCode_Share_Link_Here)
+[Play "Path to Mordor" here]([Insert_Your_MakeCode_Share_Link_Here](https://arcade.makecode.com/#editor))
