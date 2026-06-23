@@ -78,13 +78,12 @@ Why? Leaving these backend elements out allowed us to focus purely on creating a
 Reflecting on the development process, our understanding of the system has evolved significantly from a simple messaging tool into a complete, closed-loop emergency ecosystem.
 
 **Phase 1 Perspective:**
-In the early design stages, we imagined data management as a straightforward list or table of active emergencies.
-
 Initially, the project felt like a one-way application focused entirely on the sender.
+In the early design stages, we imagined data management as a straightforward list or table of active emergencies. We originally thought that as long as data was displayed on the screen, the user could use it.
 
 **Current Understanding:**
+In this final phase, we explicitly tried to avoid the mistakes we made in phase 1. Near the end of this first iteration, our mindset shifted from "just making it work" to "making it robust and maintainable."
 We learned that data visibility is not the same as data clarity. A coordinator managing critical, life-or-death situations has a high cognitive load. Translating raw row-and-column data into immediate visual ratios allows for instant situational awareness. The chart turned from a "nice-to-have visual extension" into the functional heart of the dashboard's decision-making layout.
-
 By building the Rescue Coordinator Dashboard, the system transitioned into a bidirectional architecture. The connection is no longer just a message delivery; it is a full operational loop where data is sent, visualized, evaluated, acted upon, and confirmed back to the source.
 
 
