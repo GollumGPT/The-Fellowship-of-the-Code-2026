@@ -24,27 +24,10 @@ Step 2: The Choice: The coordinator looks at the screen and chooses to either Ac
 
 Step 3: The UI Update: At the exact same time, the dashboard updates its internal counters and redraws the Chart.js pie chart in real-time.
 
-> [Mermaid-Flowchart] (./src/flowchart-system.mermaid.md)
+> [Mermaid-Flowchart](./src/flowchart-system.mermaid.md)
 
-**What state does it use or change?**
+## wireframe
 
-The interface manages four primary state variables in JavaScript:
-
-- currentLocation: Stores the current location name (e.g., “Mines of Moria”).
-- selectedHazard: Stores the currently selected danger type (Orcs, Traps, Nazgûl, etc.).
-- isSending:Becomes true while the alert transmission is in progress. This prevents duplicate transmissions and blocks repeated button presses.
-- isSent: Becomes true after the transmission has completed successfully. This permanently switches the interface into confirmation mode.
-
-**Why does it matter for the Fellowship right now?**
-
-During high-risk situations such as the attack at Amon Hen, traditional warning methods like Boromir’s horn provided limited contextual information and arrived too late.
-
-This emergency system improves coordination by instantly communicating:
-
-- the exact location of the danger
-- the specific type of threat
-
-As a result, the Fellowship can react faster, coordinate more effectively, and reduce confusion during critical moments.
 
 ##  Implementation
 
