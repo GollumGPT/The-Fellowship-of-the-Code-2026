@@ -94,3 +94,9 @@ As a result, no one knows where help is needed, how urgent the situation is, or 
 | 1.14    | 2026-05-26 | Added logic.js |
 | 1.15    | 2026-05-26 | Wrote misc Reading the runes |
 | 1.16    | 2026-05-29 | Wrote Chapter 4 |
+| 1.17   | 2026-06-23 | Compiled Artifact 5 |
+| 1.18    | 2026-06-23 | Added style.css |
+| 1.19   | 2026-06-23 | Added interface.html |
+| 1.20    | 2026-06-23 | Added logic.js |
+| 1.21    | 2026-06-23 | Added mermaid |
+| 1.22    | 2026-06-23 | Added wireframe |
