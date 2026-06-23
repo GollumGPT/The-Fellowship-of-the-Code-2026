@@ -122,5 +122,10 @@ window.decide = function(id, decision) {
 renderKPIs();
 createChart();
 renderIncidents();
-
+// Mobile Accordion Toggle Trigger
+document.querySelector('.incidents-section .chart-label').addEventListener('click', function() {
+  if (window.innerWidth <= 480) {
+    document.querySelector('.incidents-section').classList.toggle('open');
+  }
+});
 });
