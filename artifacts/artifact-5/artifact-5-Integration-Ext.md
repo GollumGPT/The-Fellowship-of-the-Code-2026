@@ -20,9 +20,11 @@ This flowchart shows the lifecycle of an emergency alert from the moment it hits
 
 Step 1: Arrival & Loading (Blue): When a Fellowship member sends an alert, the dashboard immediately calculates the data, draws the visual Chart.js pie chart, and lists the problems.
 
-Step 2: The Choice (Yellow/Green/Red): The coordinator looks at the screen and chooses to either Accept or Decline the rescue mission.
+Step 2: The Choice: The coordinator looks at the screen and chooses to either Accept or Decline the rescue mission. The moment the choice is made, the system automatically sends a live notification back to the Fellowship member who created the alert (from Artifacts 3 and 4). This lets them know if help is on the way or if the request was declined.
 
-Step 3: The Live Loop (Gray): The moment a button is clicked, the app changes its internal state. This instantly forces the KPI cards to update their numbers and recalculates the Chart.js visual layout in real-time.
+Step 3: The UI Update: At the exact same time, the dashboard updates its internal counters and redraws the Chart.js pie chart in real-time.
+
+> [Mermaid-Flowchart] (./src/flowchart-system.mermaid.md)
 
 **What state does it use or change?**
 
