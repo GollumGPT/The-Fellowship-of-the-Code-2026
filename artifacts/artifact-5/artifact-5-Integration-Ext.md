@@ -4,7 +4,25 @@
 
 **Which capability are you implementing?**
 
-The implemented capability is the Emergency Hazard Alert system. It allows a Fellowship member to instantly broadcast their current location together with a selected threat type to the rest of the group.
+This capability extends the Fellowship Companion system from the sender’s perspective
+to the coordinator’s perspective. While Emergency Alert allows members to
+send distress signals, Rescue Coordinator enables other fellowship members to visualize, track,
+and manage all active incidents in real-time.
+
+**Extension — Chart.js (library)**
+
+Chart.js is a JavaScript visualization library used to render the decision status as a
+doughnut chart.
+Coordinators see the ratio of awaiting/sent/declined incidents at a glance. The chart adds visual contex and provides a good overview. The members can see the workload and bottlenecks in less than a second. The chart is linked to the status of each emergency. If an incident changes from "Awaiting" to "Accepted", the chart automatically recalculates in real-time.
+
+## Mermaid-Chart
+This flowchart shows the lifecycle of an emergency alert from the moment it hits the coordinator's dashboard until it is resolved.
+
+Step 1: Arrival & Loading (Blue): When a Fellowship member sends an alert, the dashboard immediately calculates the data, draws the visual Chart.js pie chart, and lists the problems.
+
+Step 2: The Choice (Yellow/Green/Red): The coordinator looks at the screen and chooses to either Accept or Decline the rescue mission.
+
+Step 3: The Live Loop (Gray): The moment a button is clicked, the app changes its internal state. This instantly forces the KPI cards to update their numbers and recalculates the Chart.js visual layout in real-time.
 
 **What state does it use or change?**
 
