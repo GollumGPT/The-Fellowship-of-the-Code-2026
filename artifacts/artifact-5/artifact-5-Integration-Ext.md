@@ -40,80 +40,36 @@ Step 3: The UI Update: At the exact same time, the dashboard updates its interna
 
 ## Design Rationale
 
-**How does the logic support the goal?**
-
-The primary design goal is to reduce user mistakes under extreme stress and time pressure.
-
-The system logic enforces this by:
-
-- keeping the emergency button disabled by default
-- requiring an explicit hazard selection before transmission is possible
-- visually unlocking the interface only after a valid selection
-
-This prevents accidental or incomplete emergency broadcasts.
-
-**How does the behavior match the concept?**
-
-The current interaction flow improves the original Mermaid model in Assignment 2 by removing unclear and overlapping states such as “No alert sent” or “Wait / No Alert”.
-
-The implemented flow in the Fellowship Companion solves this by using clear and strict states:
-
-- Setup state: The user selects a hazard before anything can be sent.
-- Sending state: The interface is locked while the alert is being transmitted.
-- Sent state: The interface switches to a final confirmation screen and cannot be used again for that alert.
-
-This makes the system more predictable and easier to understand under stress.
-
-Overall, the behavior better matches the concept of a fast, reliable emergency system.
-
-**Constraints and System Boundaries:**
-
-The application deliberately uses a strict interaction lock after transmission.
-
-Once the system state changes to isSent:
-
-- the setup interface is hidden
-- the selection grid becomes inaccessible
-- interaction with hazard controls is disabled
-
-This prevents users from modifying or corrupting an already dispatched alert.
-
-Additionally, the persistent green “GPS Signal Locked” status pill functions independently from the transmission state. It continuously communicates that the device maintains an active positional signal even after an alert has been sent.
-
-**Deliberate Omissions (Scope Limitation):**
-
-This prototype intentionally excludes:
-
-- a real backend infrastructure
-- persistent databases
-- actual GPS hardware integration
-- real-time networking
-
-The displayed location (“Mines of Moria”) is currently represented as a static string inside the frontend state object.
-
-## Assumptions
-
-**Active Signal Lock:** 
-
-The system assumes that the device already has an active network and positioning connection before the interface is opened.
-This assumption is visually reinforced through the permanently active green status indicator (“GPS Signal Locked”).
-
-**Stress Limits:** 
-
-The interface assumes that the user may be operating under panic or physical stress.
-
-To minimize cognitive load:
-
-- no typing is required
-- no menus must be navigated
-- no confirmation pop-ups interrupt the workflow
-
-The entire emergency process requires only two simple interactions.
-
-**Sent Means Sent:** 
-
-The system assumes that emergency broadcasts are irreversible once transmitted.
-For this reason, the interface transitions into summary mode after sending and removes access to the original hazard selection interface. This prevents post-send manipulation and preserves transmission integrity.
+**1. How the integrated system still reflects the original intent and value**
+The original intent of the overall project was to create an emergency alert system for Fellowship members facing extreme dangers in Middle-earth. This integrated dashboard keeps that exact intent alive. It takes raw emergency signals and presents them in a way that allows an operational coordinator (like Aragorn) to understand the crisis and deploy help immediately.
 
 
----
+**2. How individual slices connect meaningfully**
+
+The project connects the previous work with this final step by completing the communication loop:
+
+Artifacts 1–4 (The Sender Side): Focused on the user in distress. They established how a Fellowship member generates an emergency alert with location, time, and threat.
+
+Artifact 5 (The Receiver Side): Functions as the coordinator’s dashboard. It ingests the alerts created by the fellowship members.
+
+They connect meaningfully because they form a full lifecycle: an alert is sent from the field, received by the dashboard, visualized in the chart, resolved via action buttons ("Accept" / "Decline"), and a confirmation log is sent back to the sender.
+
+
+**3. Why your chosen extension makes sense**
+
+The chosen extension is a real-time Chart.js Doughnut Chart. This choice makes sense for two operational reasons:
+
+**Cognitive Load Reduction:** A coordinator managing multiple life-or-death situations under stress cannot quickly interpret rows of raw text or tables. The chart aggregates the data into an instant visual shape, showing the ratio of open requests versus resolved operations.
+
+**Dynamic Interaction:** The chart is not static. It listens to the coordinator's actions. When a button is clicked, the chart updates in real-time. This changes the behavior of the system from a simple viewing page into an interactive decision-making tool.
+
+**4. What you intentionally did not build**
+Following the principle of "clarity over completeness," I deliberately chose not to build:
+
+**A Real Backend Database:** The data is handled locally via a JavaScript array. Building a persistent database would add server complexity without adding value to the core UI/UX goals of this artifact.
+
+**A Live Network Layer (WebSockets):** The feedback notification to the sender is simulated using console.log statements instead of building real network sockets.
+
+Why? Leaving these backend elements out allowed us to focus purely on creating a clean layout structure, ensuring robust responsiveness across mobile and desktop device.
+
+
