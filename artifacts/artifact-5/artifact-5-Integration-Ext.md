@@ -26,7 +26,7 @@ Step 3: The UI Update: At the exact same time, the dashboard updates its interna
 
 > [Mermaid-Flowchart](./src/flowchart-system.mermaid.md)
 
-## wireframe
+## Wireframe
 
 > [Wireframe](./src/Wireframe_neu.png)
 
