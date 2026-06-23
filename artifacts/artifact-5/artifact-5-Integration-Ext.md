@@ -1,4 +1,4 @@
-# The Fellowship Companion - Artifact IV: Logic & State
+# The Fellowship Companion - Artifact V: Integration & Extension
 
 ## System Capability
 
@@ -28,6 +28,7 @@ Step 3: The UI Update: At the exact same time, the dashboard updates its interna
 
 ## wireframe
 
+> [Mermaid-Flowchart](./src/Wireframe_neu.png)
 
 ##  Implementation
 
