@@ -93,7 +93,7 @@ function renderIncidents() {
              <button class="action-btn decline" onclick="decide(${inc.id}, 'declined')">Decline</button>
            </div>`
         : `<div class="decision-status ${inc.decision === 'accepted' ? 'status-accepted' : 'status-declined'}">
-             ${inc.decision === 'accepted' ? '✓ Sent' : '✗ Declined'}
+             ${inc.decision === 'accepted' ? '✓ Accepted' : '✗ Declined'}
            </div>`
       }
     </div>
