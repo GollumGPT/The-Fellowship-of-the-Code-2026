@@ -41,6 +41,7 @@ Step 3: The UI Update: At the exact same time, the dashboard updates its interna
 ## Design Rationale
 
 **1. How the integrated system still reflects the original intent and value**
+
 The original intent of the overall project was to create an emergency alert system for Fellowship members facing extreme dangers in Middle-earth. This integrated dashboard keeps that exact intent alive. It takes raw emergency signals and presents them in a way that allows an operational coordinator (like Aragorn) to understand the crisis and deploy help immediately.
 
 
@@ -64,12 +65,26 @@ The chosen extension is a real-time Chart.js Doughnut Chart. This choice makes s
 **Dynamic Interaction:** The chart is not static. It listens to the coordinator's actions. When a button is clicked, the chart updates in real-time. This changes the behavior of the system from a simple viewing page into an interactive decision-making tool.
 
 **4. What you intentionally did not build**
-Following the principle of "clarity over completeness," I deliberately chose not to build:
+
+Following the principle of "clarity over completeness," We deliberately chose not to build:
 
 **A Real Backend Database:** The data is handled locally via a JavaScript array. Building a persistent database would add server complexity without adding value to the core UI/UX goals of this artifact.
 
 **A Live Network Layer (WebSockets):** The feedback notification to the sender is simulated using console.log statements instead of building real network sockets.
 
 Why? Leaving these backend elements out allowed us to focus purely on creating a clean layout structure, ensuring robust responsiveness across mobile and desktop device.
+
+## Reflection
+Reflecting on the development process, our understanding of the system has evolved significantly from a simple messaging tool into a complete, closed-loop emergency ecosystem.
+
+**Phase 1 Perspective:**
+In the early design stages, we imagined data management as a straightforward list or table of active emergencies.
+
+Initially, the project felt like a one-way application focused entirely on the sender.
+
+**Current Understanding:**
+We learned that data visibility is not the same as data clarity. A coordinator managing critical, life-or-death situations has a high cognitive load. Translating raw row-and-column data into immediate visual ratios allows for instant situational awareness. The chart turned from a "nice-to-have visual extension" into the functional heart of the dashboard's decision-making layout.
+
+By building the Rescue Coordinator Dashboard, the system transitioned into a bidirectional architecture. The connection is no longer just a message delivery; it is a full operational loop where data is sent, visualized, evaluated, acted upon, and confirmed back to the source.
 
 
