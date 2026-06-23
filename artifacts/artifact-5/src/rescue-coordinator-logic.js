@@ -4,7 +4,8 @@ const incidents = [
   { id: 1, name: "Frodo Baggins", hazard: "BALROG", threat: "CRITICAL", location: "Mines of Moria", time: "14:32", decision: null },
   { id: 2, name: "Gandalf",       hazard: "NAZGUL", threat: "HIGH",     location: "Khazad-dûm",    time: "14:35", decision: null },
   { id: 3, name: "Aragorn",       hazard: "ORCS",   threat: "MEDIUM",   location: "Rivendell",     time: "14:40", decision: null },
-  { id: 4, name: "Legolas",       hazard: "TRAPS",  threat: "LOW",      location: "Mirkwood",      time: "14:45", decision: null }\n];
+  { id: 4, name: "Legolas",       hazard: "TRAPS",  threat: "LOW",      location: "Mirkwood",      time: "14:45", decision: null }
+];
 
 // Chart-Instanz direkt beim Erstellen speichern
 let chart = null;
@@ -21,34 +22,61 @@ function getKPIs() {
 function renderKPIs() {
   const { total, awaiting, sent, declined } = getKPIs();
   document.getElementById('kpiSection').innerHTML = `
-    <div class=\"kpi-card\">
-      <div class=\"kpi-label\">Total Incidents</div>
-      <div class=\"kpi-value\">${total}</div>
+    <div class="kpi-card">
+      <div class="kpi-label">Total Incidents</div>
+      <div class="kpi-value">${total}</div>
     </div>
-    <div class=\"kpi-card\">
-      <div class=\"kpi-label\">Awaiting Decision</div>
-      <div class=\"kpi-value\">${awaiting}</div>
+    <div class="kpi-card awaiting">
+      <div class="kpi-label">Awaiting Decision</div>
+      <div class="kpi-value">${awaiting}</div>
     </div>
-    <div class=\"kpi-card\">
-      <div class=\"kpi-label\">Rescue Teams Sent</div>
-      <div class=\"kpi-value var-sent\">${sent}</div>
+    <div class="kpi-card sent">
+      <div class="kpi-label">Rescue Teams Sent</div>
+      <div class="kpi-value">${sent}</div>
     </div>
-    <div class=\"kpi-card\">
-      <div class=\"kpi-label\">Requests Declined</div>
-      <div class=\"kpi-value var-declined\">${declined}</div>
+    <div class="kpi-card declined">
+      <div class="kpi-label">Requests Declined</div>
+      <div class="kpi-value">${declined}</div>
     </div>
   `;
 }
 
+function createChart() {
+  const { awaiting, sent, declined } = getKPIs();
+  const ctx = document.getElementById('statusChart').getContext('2d');
+  chart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Awaiting Decision', 'Rescue Teams Sent', 'Requests Declined'],
+      datasets: [{
+        data: [awaiting, sent, declined],
+        backgroundColor: ['#8c8576', '#4caf50', '#ff3333'],
+        borderColor: ['#f4eae1', '#f4eae1', '#f4eae1'],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { family: "'Cinzel', Georgia, serif", size: 11 }, color: '#161512', padding: 12 }
+        }
+      }
+    }
+  });
+}
+
 function renderIncidents() {
-  const grid = document.getElementById('incidentsGrid');
-  grid.innerHTML = incidents.map(inc => `
-    <div class="incident-card ${inc.decision !== null ? 'resolved' : ''}">
+  document.getElementById("incidentsGrid").innerHTML = incidents.map(inc => `
+    <div class="incident-card ${inc.decision === 'declined' ? 'declined' : inc.hazard.toLowerCase()}">
       <div class="incident-header">
         <div class="header-left">
           <div class="incident-name">${inc.name}</div>
-          <div class="threat-badge">
-            Threat: <span class="threat-value threat-${inc.threat.toLowerCase()}">${inc.threat}</span>
+          <div class="threat-display">
+            <span class="threat-label">Threat</span>
+            <span class="threat-value threat-${inc.threat.toLowerCase()}">${inc.threat}</span>
           </div>
         </div>
         <div class="header-right">
@@ -56,8 +84,8 @@ function renderIncidents() {
         </div>
       </div>
       <div class="incident-details">
-        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value\">${inc.location}</span></div>
-        <div class="detail-row"><span class="detail-label">Time</span><span class="detail-value\">${inc.time}</span></div>
+        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">${inc.location}</span></div>
+        <div class="detail-row"><span class="detail-label">Time</span><span class="detail-value">${inc.time}</span></div>
       </div>
       ${inc.decision === null
         ? `<div class="incident-actions">
@@ -84,42 +112,15 @@ window.decide = function(id, decision) {
   const inc = incidents.find(i => i.id === id);
   if (inc) {
     inc.decision = decision;
-    
-    // Simulation der Benachrichtigung an das Fellowship-Mitglied (System-Rückmeldung)
-    console.log(`[System Notification] Nachricht an ${inc.name} gesendet: Rettungsstatus aktualisiert auf '${decision === 'accepted' ? 'Rescue En Route' : 'Request Declined'}'.`);
-    
+    // Simulation der Rückmeldung:
+    console.log(`Notification sent to ${inc.name}: Rescue status updated to ${decision}.`);
     refresh();
   }
 }
 
-// Chart Initialisierung
-const ctx = document.getElementById('statusChart').getContext('2d');
-const { awaiting, sent, declined } = getKPIs();
-
-chart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-    labels: ['Awaiting', 'Sent', 'Declined'],
-    datasets: [{
-      data: [awaiting, sent, declined],
-      backgroundColor: ['#8c8576', '#4caf50', '#ff3333'],
-      borderColor: '#4a3f2c',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: 'bottom',
-        labels: { color: '#161512', font: { family: 'Cinzel' } }
-      }
-    }
-  }
-});
-
-// Erstes Rendern der UI
-refresh();
+// Init
+renderKPIs();
+createChart();
+renderIncidents();
 
 });
