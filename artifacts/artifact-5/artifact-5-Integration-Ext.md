@@ -32,11 +32,11 @@ Step 3: The UI Update: At the exact same time, the dashboard updates its interna
 
 ##  Implementation
 
-> [interface.html](./src/interface.html)
+> [interface.html](./src/rescue-coordinator-index.html)
 
-> [style.css](./src/style.css)
+> [style.css](./src/rescue-coordinator-style.css)
 
-> [logic.js](./src/logic.js)
+> [logic.js](./src/rescue-coordinator-logic.js)
 
 ## Design Rationale
 
