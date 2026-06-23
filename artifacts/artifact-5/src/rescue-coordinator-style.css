@@ -136,7 +136,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.incident-card.balrog { border-left-color: var(--threat-critical); background: #231510; box-shadow: 0 0 20px rgba(255,51,51,0.2); animation: pulse 2s ease-in-out infinite; }
+.incident-card.balrog { border-left-color: var(--threat-critical); background: #231510; box-shadow: 0 0 20px rgba(255,51,51,0.2); }
 .incident-card.nazgul { border-left-color: var(--threat-high); box-shadow: 0 4px 12px rgba(255,152,0,0.15); }
 .incident-card.orcs { border-left-color: var(--threat-medium); box-shadow: 0 4px 12px rgba(255,193,7,0.15); }
 .incident-card.traps { border-left-color: var(--threat-low); box-shadow: 0 4px 12px rgba(76,175,80,0.15); }
