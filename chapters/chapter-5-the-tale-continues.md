@@ -4,7 +4,7 @@
 
 **Table of Contents**
 
-- [The Red Book of Westmarch - Chapter X: Title](#the-red-book-of-westmarch---chapter-x-title)
+- [The Red Book of Westmarch - Chapter 5: Title](#the-red-book-of-westmarch---chapter-5-the-tale-continues)
   - [Summary](#summary)
   - [Artifact](#artifact)
   - [AI Assistance](#ai-assistance)
