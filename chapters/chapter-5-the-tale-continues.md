@@ -29,27 +29,31 @@ This dashboard serves as a central command center to coordinate emergency calls 
 
 ## Artifact
 
-*`Adapt to your project...`*
-
-**File:** `[Name](Link)`
-
 **Build:**
 
-... [requirements document / Mermaid flow / wireframe / HTML + CSS page / JavaScript page / low-code extension]
+> [interface.html](./src/rescue-coordinator-index.html)
+
+> [style.css](./src/rescue-coordinator-style.css)
+
+> [logic.js](./src/rescue-coordinator-logic.js)
+
+> [Wireframe](./src/Wireframe_neu.png)
+
+> [Mermaid-Flowchart](./src/flowchart-system.mermaid.md)
 
 **Focus:**
 
-... [specific feature of the system / requirement addressed]
+Rescue Coordinator Dashboard
 
 ---
 
 ## AI Assistance
 
-What did we expect?
+**What did we expect?**
 
 We expected the AI to immediately generate flawless code that I could copy-paste, and that the built-in simulation feedback (console.log) would be sufficient to demonstrate the dashboard's functionality.
 
-What actually happened?
+**What actually happened?**
 
 While the code worked perfectly in the background, two fundamental issues occurred:
 
@@ -57,15 +61,15 @@ While the code worked perfectly in the background, two fundamental issues occurr
 
  - The feedback simulation initially seemed "broken" because no visual feedback appeared on the screen after clicking a button. The feedback was mistakenly sent only to the invisible browser console.
 
-How did AI help or mislead us?
+**How did AI help or mislead us?**
 
 The AI was very helpful in setting up the clean data structure. However, it was not perfect with user experience (UX).
 
-What decision (changes) did we make consciously?
+**What decision (changes) did we make consciously?**
 
 We consciously decided to fix the mobile layout interaction so the menu opens correctly on phones.
 
-What would I do differently next time?
+**What would I do differently next time?**
 
 Next time, we will show system messages directly and visibly on the screen (like a colored banner) from the start, instead of just having the message in the background console.
 
