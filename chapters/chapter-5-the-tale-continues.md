@@ -20,11 +20,10 @@ This dashboard serves as a central command center to coordinate emergency calls 
 
 **Learning Outcomes**
 
-- Understand [concept / skill of the phase]
-- Apply [tool / language / logic] to build [artifact]
-- Reflect on AI-assisted development and decision-making
-- Contribute to a **shared, evolving system**
-
+- Creating this entire capability in one go—instead of splitting it into separate steps like before—gave us a much better overview of the whole picture.
+- Apply the Chart.js library to create an interactive doughnut chart that visualizes data states
+- AI is helpful for building data structures, but human design choices are necessary to fix mobile layouts and move system feedback from background logs onto a visible screen banner.
+- Contribute to a **shared, evolving system**: This capability extends the Fellowship Companion system from the sender’s perspective to the coordinator’s perspective.
 ---
 
 ## Artifact
@@ -81,5 +80,3 @@ Next time, we will show system messages directly and visibly on the screen (like
 - Faster Development Due to Experience: Implementing this artifact was much faster than the previous. Because we could use our experience and the feedback from the first run.
 
 - The Importance of UX Feedback: If a system message only shows up in the background console, it does not exist for the end-user. A good dashboard must always show a clear message or banner on the screen after an action.
-
-- 
