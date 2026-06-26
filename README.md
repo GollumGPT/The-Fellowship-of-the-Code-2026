@@ -100,3 +100,4 @@ As a result, no one knows where help is needed, how urgent the situation is, or 
 | 1.20    | 2026-06-23 | Added logic.js |
 | 1.21    | 2026-06-23 | Added mermaid |
 | 1.22    | 2026-06-23 | Added wireframe |
+| 1.23    | 2026-06-26 | Wrote Chapter 5 |
